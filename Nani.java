@@ -3,7 +3,7 @@ public class Nani {
 	public void Nihaoma() throws Exception {
 		int b = 10;   
 		b = Dog_.cat_();
-		System.out.println("Labs: "+b);
+		System.out.println("Labs: " + b);
 		int i = 1;
 		while (i <= b) {
 			Execut exec = new Execut(); 
