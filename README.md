@@ -2,4 +2,4 @@
 
 ## What is this? 
 
-> This is avoiding objects (Obstacles) simulator 
+> This is avoiding objects (Obstacles) simulator written in java
