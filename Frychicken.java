@@ -10,4 +10,13 @@ public class Frychicken {
 				"Confirm", JOptionPane.OK_CANCEL_OPTION);
 		return result;
 	}
+	public int ChickenIsNotFood() throws Exception {
+		int i = isChickenFood("Wrong answer!!");
+		return i;
+	}
+	public static int isChickenNotFood(String theMessage) {
+		int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
+				"You type something wrong", JOptionPane.OK_OPTION);
+		return result;
+	}
 }
