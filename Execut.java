@@ -10,7 +10,6 @@ public class Execut  extends Component {
 	private int x = 200;
 	private int y = 600;
 	private ArrayList<Integer> xOb = new ArrayList<Integer>();
-	private ArrayList<Integer> fxOb = new ArrayList<Integer>();
 	private  ArrayList<Integer> yOb = new ArrayList<Integer>();
 	int userin = 1;
 	public Execut(int userin) {
@@ -18,8 +17,12 @@ public class Execut  extends Component {
 	}
 	public void assin() {
 		for (int i =0; i < userin; i++) {
-		   xOb.add(RanX());
-		   yOb.add(RanY());
+			if (i ==0 || i ==2) {
+				xOb.add(RanX());
+			}else {
+				xOb.add(xOb.get(0) + 237);
+			}
+			yOb.add(RanY());
 		}
 		Collections.sort(yOb);
 		Collections.reverse(yOb);
@@ -71,7 +74,6 @@ public class Execut  extends Component {
 		frame.setSize(600, 800); 
 		runpls();
 	}
-
 	private boolean right = false;
 	private boolean left = false;
 	private boolean up = true;
