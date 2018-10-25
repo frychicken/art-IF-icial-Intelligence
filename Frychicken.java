@@ -19,4 +19,13 @@ public class Frychicken {
 				"You type something wrong", JOptionPane.OK_OPTION);
 		return result;
 	}
+	public int FriedChicken() throws Exception {
+		int i = isFriedChicken("Do you want to enable debug mode?");
+		return i;
+	}
+	public static int isFriedChicken(String theMessage) {
+		int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
+				"Debug option", JOptionPane.OK_CANCEL_OPTION);
+		return result;
+	}
 }
