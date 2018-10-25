@@ -1,7 +1,6 @@
 import javax.swing.*; 
 import java.awt.*;
 import java.util.*;
-
 public class Execut  extends Component {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
@@ -9,33 +8,51 @@ public class Execut  extends Component {
 	String msg = "UP";
 	private int x = 200;
 	private int y = 600;
+	private boolean debugg = true;
 	private ArrayList<Integer> xOb = new ArrayList<Integer>();
 	private  ArrayList<Integer> yOb = new ArrayList<Integer>();
 	int userin = 1;
 	public Execut(int userin) {
 		this.userin = userin;
 	}
-	public void assin() {
+	public void assin(boolean debugg) {
+		this.debugg = debugg;
 		for (int i =0; i < userin; i++) {
 			if (i ==0 || i ==2) {
 				xOb.add(RanX());
 			}else {
-				xOb.add(xOb.get(0) + 237);
+				double rand = Math.random();
+				if (rand >= 0.5)
+					xOb.add(xOb.get(0) + 237);
+				else xOb.add(xOb.get(0)-237);
 			}
-			yOb.add(RanY());
+			if (i==0||i==1)
+				yOb.add(RanY());
+			else {
+				double rand = Math.random();
+				if (rand >= 0.5)
+					yOb.add(yOb.get(0) + 237);
+				else yOb.add(yOb.get(0) - 237);
+			}
 		}
 		Collections.sort(yOb);
 		Collections.reverse(yOb);
+		if (debugg) {
+			for (int i= 0; i< userin; i++){
+				System.out.println("x" + (i+1) + " " +xOb.get(i));
+				System.out.println("y" + (i+1) +" " +yOb.get(i));
+			}
+		}
 	}
 
 	public int RanX() {
 		Random randomness = new Random();
-		int rand = randomness.nextInt(300)+1;
+		int rand = randomness.nextInt(350)+40;
 		return rand;
 	}
 	public int RanY() {
 		Random randomness = new Random();
-		int rand = randomness.nextInt(400)+1;
+		int rand = randomness.nextInt(400)+30;
 		return rand;
 	}
 	class Method_T extends Component {
@@ -46,22 +63,25 @@ public class Execut  extends Component {
 			for (int i =0; i < userin; i++) {
 				g.setColor(Color.green);
 				g.fillRect(xOb.get(i),yOb.get(i),150,150);
-				if ((y >= yOb.get(i) && y<= yOb.get(i) +150) && (x+123 >= xOb.get(i)  && x+123 <= xOb.get(i)+150)) {
+				if ((y >= yOb.get(i) && y<= yOb.get(i) +150) && (x+123 >= xOb.get(i)  && x+123 <= xOb.get(i)+150) && debugg) {
 					g.setColor(Color.gray);
 					g.fillRect(xOb.get(i),yOb.get(i),150,150);
 				}
-				else if ((y >= yOb.get(i)  && y<= yOb.get(i) +150) && (x >= xOb.get(i)  && x <= xOb.get(i)+150)) {
+				else if ((y >= yOb.get(i)  && y<= yOb.get(i) +150) && (x >= xOb.get(i)  && x <= xOb.get(i)+150) && debugg) {
 					g.setColor(Color.gray);
 					g.fillRect(xOb.get(i),yOb.get(i),150,150);
 				}
 			}
-			g.setColor(Color.black);
-			g.fillOval(x, y, 10, 10);
-			g.setColor(Color.black);
-			g.fillOval(x+123, y, 10, 10);
+			if (debugg) {
+				g.setColor(Color.black);
+				g.fillOval(x, y, 10, 10);
+				g.setColor(Color.black);
+				g.fillOval(x+123, y, 10, 10);
+				g.setColor(Color.red);
+				g.drawString(msg, 300, 750);
+			}
 			g.setColor(Color.red);
 			g.fillRect(x + 40, y +40, 50, 50);
-			g.drawString(msg, 300, 750);
 		}
 	}
 	public void run() {
