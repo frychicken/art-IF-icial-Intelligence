@@ -6,4 +6,4 @@
 
 ## known issues
 
-> for <= 2 obstacles: sometimes the object just does not go as expected due to the algorithm 
+> for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm 
