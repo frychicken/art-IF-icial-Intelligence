@@ -47,7 +47,7 @@ public class Execut  extends Component {
 
 	public int RanX() {
 		Random randomness = new Random();
-		int rand = randomness.nextInt(350)+40;
+		int rand = randomness.nextInt(300)+30;
 		return rand;
 	}
 	public int RanY() {
@@ -85,7 +85,7 @@ public class Execut  extends Component {
 		}
 	}
 	public void run() {
-		frame = new JFrame("D 2 + D"); 
+		frame = new JFrame("D 2 + D - avoiding objects simulator " + " @ Debug mode: "+debugg); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		contentt = new Method_T();
 		frame.getContentPane().add(BorderLayout.CENTER, contentt);  
