@@ -12,6 +12,10 @@
 
 ~~for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm~~
 
+______________________________________________________________
+
+#### _ABOUT_:
+
 **Debug mode:**
 
 Display x,y,censors and everything you need to fix bugs
