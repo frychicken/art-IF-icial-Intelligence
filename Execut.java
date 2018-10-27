@@ -1,6 +1,7 @@
 import javax.swing.*; 
 import java.awt.*;
 import java.util.*;
+
 public class Execut  extends Component {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
@@ -79,6 +80,12 @@ public class Execut  extends Component {
 				g.fillOval(x+123, y, 10, 10);
 				g.setColor(Color.red);
 				g.drawString(msg, 300, 750);
+                int c = 600;
+                int cc = 600;
+				for (int i =0; i<userin; i++) {
+				g.drawString("x"+(i+1)+": "+xOb.get(i), 500, c+=50);
+				g.drawString("y"+(i+1)+": "+yOb.get(i), 430, cc+=50);
+				}
 			}
 			g.setColor(Color.red);
 			g.fillRect(x + 40, y +40, 50, 50);
