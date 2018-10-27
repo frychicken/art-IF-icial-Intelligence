@@ -11,3 +11,19 @@
 ~~for ob > 1 obstacles: sometimes the object just does not go as expected due to the algorithm~~
 
 ~~for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm~~
+
+**Debug mode:**
+
+Display x,y,censors and everything you need to fix bugs
+
+**Non - debug mode**
+
+Just display moving object and obstacle(s)
+
+**Lab(s)**
+
+Run the program how many times you desire (default: 10; max: non; min: non)
+
+**Obstacle(s)**
+
+Decide how many obstacles you want (default: 1; max: 3; min: 1)
