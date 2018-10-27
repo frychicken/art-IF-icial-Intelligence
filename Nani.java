@@ -9,7 +9,7 @@ public class Nani {
 		System.out.println("Lab(s): "+b);
 		int i = 1;
 		int userin = Integer.valueOf(reduc.substring(tess+1));
-		if (userin > 3 || userin<0)
+		if (userin > 3 || userin<=0)
 			while (userin >3 || userin <=0) {
 				userin = Integer.valueOf(Dog_.cat_().substring(tess+1));
 				if (userin >3 || userin <=0)
