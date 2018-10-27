@@ -1,16 +1,20 @@
+
 public class Nani {
 	static Frychicken fry = new Frychicken();
 	public void Nihaoma() throws Exception {
-		int b = 10;   
-		b = Dog_.cat_();
+		int b = 10; 
+		String reduc = Dog_.cat_();
+		int tess = reduc.indexOf(".");
+		b = Integer.valueOf(reduc.substring(0,tess));
 		System.out.println("Lab(s): "+b);
 		int i = 1;
-		int userin = 4;
-		while (userin >3 || userin < 0) {
-			userin = Dog_.fudgingcat_();
-			if (userin >3 || userin < 0)
-				fry.ChickenIsNotFood();
-		}
+		int userin = Integer.valueOf(reduc.substring(tess+1));
+		if (userin > 3 || userin<0)
+			while (userin >3 || userin < 0) {
+				userin = Integer.valueOf(Dog_.cat_().substring(tess+1));
+				if (userin >3 || userin < 0)
+					fry.ChickenIsNotFood();
+			}
 		boolean debugg = true;
 		int n = -1;
 		int st = fry.FriedChicken();
