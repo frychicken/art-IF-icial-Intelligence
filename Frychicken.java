@@ -2,30 +2,15 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 public class Frychicken {
 	public int ChickenNotFood() throws Exception {
-		int i = isChickenFood("Are your sure you want to exit?");
-		return i;
-	}
-	public static int isChickenFood(String theMessage) {
-		int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
-				"Confirm", JOptionPane.OK_CANCEL_OPTION);
-		return result;
+		return JOptionPane.showConfirmDialog((Component) null, "Done! Are your sure you want to exit?",
+				"Confirm", JOptionPane.YES_NO_OPTION);
 	}
 	public int ChickenIsNotFood() throws Exception {
-		int i = isChickenFood("Wrong answer!!");
-		return i;
+		return JOptionPane.showConfirmDialog((Component) null, "Wrong answer!!",
+				"You type something wrong", JOptionPane.ERROR_MESSAGE);
 	}
-	public static int isChickenNotFood(String theMessage) {
-		int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
-				"You type something wrong", JOptionPane.OK_OPTION);
-		return result;
-	}
-	public int FriedChicken() throws Exception {
-		int i = isFriedChicken("Do you want to enable debug mode?");
-		return i;
-	}
-	public static int isFriedChicken(String theMessage) {
-		int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
-				"Debug option", JOptionPane.OK_CANCEL_OPTION);
-		return result;
+    public int FriedChicken() throws Exception {
+		return JOptionPane.showConfirmDialog((Component) null, "Do you want to enable debug mode?",
+				"Debug option", JOptionPane.YES_NO_OPTION);
 	}
 }
