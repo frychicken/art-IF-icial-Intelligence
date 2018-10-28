@@ -1,4 +1,4 @@
-# art-IF-icial-Intelligence
+# art(IF)icial Intelligence
 
 ## What is this? 
 
@@ -15,6 +15,10 @@
 ## TODO: 
 
 fix, improve algorithm, add 2 objects + 
+
+_________________________________________
+
+## Content
 
 ### Jar file:
 
