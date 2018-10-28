@@ -59,9 +59,9 @@ class Dog_ extends JFrame implements ActionListener {
 		JLabel lbllbl4 = new JLabel("R");
 		JLabel lbllbl5 = new JLabel("G");
 		JLabel lbllbl6 = new JLabel("B");
-		txtTextBox1 = new JTextField("34");
-		txtTextBox2 = new JTextField("139"); 
-		txtTextBox3 = new JTextField("34");
+		txtTextBox1 = new JTextField("0");
+		txtTextBox2 = new JTextField("255"); 
+		txtTextBox3 = new JTextField("0");
 		txtTextBox4 = new JTextField("255"); 
 		txtTextBox5  = new JTextField("0");
 		txtTextBox6 = new JTextField("0"); 
@@ -92,7 +92,7 @@ class Dog_ extends JFrame implements ActionListener {
 		label.setBounds(7, 1, 400,30);
 		textfield.setBounds(330, 7, 170,20);
 		label2.setBounds(7, 30, 500,30);
-		textfield2.setBounds(400, 34, 100,20);
+		textfield2.setBounds(410, 34, 100,20);
 		checkBox.setBounds(250,100,120,19);
 		button.setBounds(270,125,70,25);
 		button2.setBounds(270, 150, 65, 25);
