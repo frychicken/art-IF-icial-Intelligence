@@ -12,6 +12,10 @@
 
 ~~for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm~~
 
+## TODO: 
+
+fix, improve algorithm, add 2 objects + 
+
 ______________________________________________________________
 
 #### _ABOUT_:
@@ -34,4 +38,4 @@ Decide how many obstacles you want (default: 1; max: 3; min: 1; default color: g
 
 **Coloring**
 
-RGB color-red, green, blue: you can set this for obstacle(s) and object (default obstacle(s) color: green; default object color: red)
+RGB color-red, green, blue: you can set this for obstacle(s) and object (default obstacle(s) color: green - R:0 G:255 B:0; default object color: red -R:255  G:0  B:0)
