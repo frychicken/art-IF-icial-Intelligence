@@ -16,6 +16,18 @@
 
 fix, improve algorithm, add 2 objects + 
 
+### Jar file:
+
+[Latest here](/JarFile/AOW.jar)
+
+### ChangeLog:
+
+[Click here](/JarFile/ChangeLog.md)
+
+### Pictures:
+
+[Here](Pic/Pic.md)
+
 ______________________________________________________________
 
 #### _ABOUT_:
