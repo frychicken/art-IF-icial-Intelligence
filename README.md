@@ -30,4 +30,8 @@ Run the program how many times you desire (default: 10; max: non; min: non)
 
 **Obstacle(s)**
 
-Decide how many obstacles you want (default: 1; max: 3; min: 1)
+Decide how many obstacles you want (default: 1; max: 3; min: 1; default color: green)
+
+**Coloring**
+
+RGB color-red, green, blue: you can set this for obstacle(s) and object (default obstacle(s) color: green; default object color: red)
