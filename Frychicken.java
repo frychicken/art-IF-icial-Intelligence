@@ -9,8 +9,4 @@ public class Frychicken {
 		return JOptionPane.showConfirmDialog((Component) null, "Wrong answer!!",
 				"You type something wrong", JOptionPane.ERROR_MESSAGE);
 	}
-    public int FriedChicken() throws Exception {
-		return JOptionPane.showConfirmDialog((Component) null, "Do you want to enable debug mode?",
-				"Debug option", JOptionPane.YES_NO_OPTION);
-	}
 }
