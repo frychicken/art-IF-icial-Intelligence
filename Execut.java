@@ -9,11 +9,19 @@ public class Execut  extends Component {
 	String msg = "UP";
 	private int x = 200;
 	private int y = 600;
+	Color object = Color.RED;
+	Color obstacle = Color.GREEN;
 	private boolean debugg = true;
 	private ArrayList<Integer> xOb = new ArrayList<Integer>();
 	private  ArrayList<Integer> yOb = new ArrayList<Integer>();
 	int userin = 1;
-	public Execut(int userin) {
+	int lalala;
+	int alala;
+	public Execut(int userin, Color object, Color obstacle, int i, int b) {
+		this.object = object;
+		this.obstacle = obstacle;
+		lalala = i;
+		alala = b;
 		this.userin = userin;
 	}
 	public void assin(boolean debugg) {
@@ -62,7 +70,7 @@ public class Execut  extends Component {
 		public void paint(Graphics g){
 
 			for (int i =0; i < userin; i++) {
-				g.setColor(Color.green);
+				g.setColor(obstacle);
 				g.fillRect(xOb.get(i),yOb.get(i),150,150);
 				if ((y >= yOb.get(i) && y<= yOb.get(i) +150) && (x+123 >= xOb.get(i)  && x+123 <= xOb.get(i)+150) && debugg) {
 					g.setColor(Color.gray);
@@ -80,14 +88,17 @@ public class Execut  extends Component {
 				g.fillOval(x+123, y, 10, 10);
 				g.setColor(Color.red);
 				g.drawString(msg, 300, 750);
-				int c = 600;
-				int cc = 600;
+				int c = 700;
+				int cc = 700;
 				for (int i =0; i<userin; i++) {
-					g.drawString("x"+(i+1)+": "+xOb.get(i), 500, c+=50);
-					g.drawString("y"+(i+1)+": "+yOb.get(i), 430, cc+=50);
+					g.drawString("x"+(i+1)+": "+xOb.get(i), 500, c+=20);
+					g.drawString("y"+(i+1)+": "+yOb.get(i), 430, cc+=20);
+					g.drawString("lab(s) run: "+lalala, 60, 720);
+					g.drawString("Obstacle(s): "+userin, 60, 700);
+					g.drawString("lab(s): "+alala, 60, 680);	
 				}
 			}
-			g.setColor(Color.red);
+			g.setColor(object);
 			g.fillRect(x + 40, y +40, 50, 50);
 		}
 	}
@@ -150,5 +161,3 @@ public class Execut  extends Component {
 		}
 	}
 }
-
-
