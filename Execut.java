@@ -1,7 +1,6 @@
 import javax.swing.*; 
 import java.awt.*;
 import java.util.*;
-
 public class Execut  extends Component {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
@@ -103,19 +102,20 @@ public class Execut  extends Component {
 		}
 	}
 	public void run() {
-		frame = new JFrame("D 2 + D - avoiding objects simulator " + " @ Debug mode: "+debugg); 
+		frame = new JFrame("D2+D-AO Simulator" + " @Debug mode: "+debugg); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		contentt = new Method_T();
 		frame.getContentPane().add(BorderLayout.CENTER, contentt);  
-		frame.setVisible(true); 
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
 		frame.setResizable(false);
 		frame.setSize(600, 800); 
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true); 
 		runpls();
 	}
 	private boolean right = false;
 	private boolean left = false;
 	private boolean up = true;
-
 	public void runpls() {
 		while(true) {
 			for (int i =0; i < userin; i ++) {
@@ -132,12 +132,16 @@ public class Execut  extends Component {
 					x-=3;
 					if (y <= yOb.get(i) +150 && (x+123) < xOb.get(i)  ) { up = true; }
 					else up = false;
+					Soundfx soundfx = new Soundfx();
+					soundfx.sound();
 				}
 				if(right) {
 					msg = "RIGHT";
 					x+=3;
 					if (y <= yOb.get(i) +150 && x > xOb.get(i)  ) { up = true; }
 					else up = false;
+					Soundfx soundfx = new Soundfx();
+					soundfx.sound();
 				}
 				if(up) {
 					y--;
@@ -145,6 +149,8 @@ public class Execut  extends Component {
 					right = false;
 				}
 				if (y+40+50 <= 0) {
+					Soundfx soundfx = new Soundfx();
+					soundfx.sound();
 					frame.setVisible(false); 
 					return;
 				}
