@@ -13,3 +13,15 @@ add coloring for object and obstacle(s)
 add setup menu (merge debug mode in setup) + redesign setup
 
 clean up code
+
+## Version 5.0.2: Bad Gateway
+
+>AOW3.java 
+
+add update + updater (UpdaterAOW.jar)
+
+change the location of the application
+
+add sound
+
+add icon
