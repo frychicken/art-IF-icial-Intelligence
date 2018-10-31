@@ -1,4 +1,5 @@
 import java.awt.*;
+import javax.swing.JFrame;
 public class Loading extends Component {
 	private static final long serialVersionUID = 1L;
 	int x = 10;
@@ -6,9 +7,12 @@ public class Loading extends Component {
 	double strin=1;
 	String display;
 	String msg[] = new String[3];
+	public Loading(JFrame frame) {
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
+	}
 	public void paint(Graphics g) {
 		g.drawString("loading...", 130,150);
-		g.drawString(strin + "%", 140, 210);
+		g.drawString((int)strin + "%", 140, 210);
 		g.setColor(Color.BLACK);
 		g.drawRect(105, 180, 90, 10);
 		g.setColor(Color.BLUE);
