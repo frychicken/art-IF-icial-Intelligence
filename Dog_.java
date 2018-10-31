@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.*;
 import java.awt.font.TextAttribute;
 import java.net.URI;
@@ -19,7 +20,7 @@ class Dog_ extends JFrame implements ActionListener {
 	static JCheckBox checkBox;
 	static int ff=0;
 	static List<Integer> doggo = new LinkedList<Integer>();
-	public static String cat_() throws Exception{
+	public String cat_() throws Exception{
 		final URI uri = new URI("https://github.com/frychicken/art-IF-icial-Intelligence/blob/master/README.md");
 		frame = new JFrame("Setup");
 		JButton button2 = new JButton();
@@ -111,8 +112,10 @@ class Dog_ extends JFrame implements ActionListener {
 		txtTextBox5.setBounds(370, 80, 40, 20);
 		txtTextBox6.setBounds(470, 80, 40, 20);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(600, 205); 
+		frame.setSize(600, 215); 
 		frame.setResizable(false);
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
+		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);       
 		synchronized (doggo) {
 			while (doggo.isEmpty())
@@ -128,6 +131,7 @@ class Dog_ extends JFrame implements ActionListener {
 			return doge;
 		}
 	}
+
 	public void actionPerformed(ActionEvent e) { 	
 		String s = e.getActionCommand(); 
 		if(checkBox.isSelected()) {
