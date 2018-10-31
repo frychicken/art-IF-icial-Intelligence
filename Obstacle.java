@@ -2,13 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 public class Obstacle {
 	public static void main(String[] args) throws Exception {
-		Loading loadd = new Loading();
-		JFrame frame = new JFrame("Loading"); 
+        CheckUpdate ccu= new CheckUpdate();
+        ccu.checkup();
+		JFrame frame = new JFrame("Wait"); 
+		Loading loadd = new Loading(frame);
+		frame.getContentPane().add(BorderLayout.CENTER, loadd); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-		frame.getContentPane().add(BorderLayout.CENTER, loadd);  
-		frame.setVisible(true); 
 		frame.setResizable(false);
-		frame.setSize(300, 300); 
+		frame.setSize(300, 300); 	
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);  
 		String f = "Avoiding objects simulator by @frychicken";
 		for (int i =0; i<f.length(); i++) {
 			String c = f.substring(i, i+1);
