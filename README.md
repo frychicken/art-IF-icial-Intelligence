@@ -8,6 +8,8 @@
 
 >Sometimes, it does not go as expected
 
+>System.getProperty("user.dir"); ??!! = dir -1 
+
 ~~for ob > 1 obstacles: sometimes the object just does not go as expected due to the algorithm~~
 
 ~~for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm~~
