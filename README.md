@@ -22,7 +22,7 @@ _________________________________________
 
 ### Jar file:
 
-[Latest here](/JarFile/AOW.jar)
+[Latest here](/JarFile/AOW3.jar)
 
 ### ChangeLog:
 
@@ -55,3 +55,6 @@ Decide how many obstacles you want (default: 1; max: 3; min: 1; default color: g
 **Coloring**
 
 RGB color-red, green, blue: you can set this for obstacle(s) and object (default obstacle(s) color: green - R:0 G:255 B:0; default object color: red -R:255  G:0  B:0)
+
+**Updates**
+program will check for update automatically (if there is version.txt and UpdaterAow.jar in the same location)
