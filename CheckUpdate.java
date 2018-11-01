@@ -1,19 +1,22 @@
 import java.awt.Component;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-
 import javax.swing.JOptionPane;
 
 public class CheckUpdate {
- public void checkup() throws IOException {
-	 File checkifex = new File(System.getProperty("user.dir")+"/version.txt");
+ public void checkup() throws Exception {
+	 String cheee = getClass().getResource("version.txt").toString();
+	 cheee = cheee.substring(cheee.indexOf(":")+1);
+	 File checkifex = new File(cheee);
 		if(checkifex.exists() && !checkifex.isDirectory()) {
 			@SuppressWarnings("resource")
-			BufferedReader br2 = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/version.txt")); 
+			BufferedReader br2 = new BufferedReader(new FileReader(cheee)); 
 			String st2; 
 			StringBuilder fromweb = new StringBuilder();
 			while ((st2 = br2.readLine()) != null) { 
@@ -41,9 +44,28 @@ public class CheckUpdate {
 			if (c > d) {
 				if (JOptionPane.showConfirmDialog((Component) null, "New version is available Do you want to update?",
 						"Confirm", JOptionPane.YES_NO_OPTION) ==0) {
+					BufferedWriter bw = null;
+					FileWriter fw = null;
+					try {
+						fw = new FileWriter(cheee);
+						bw = new BufferedWriter(fw);
+						bw.write(fromcom.toString());
+					} catch (IOException e) {
+						e.printStackTrace();
+					} finally {
+						try {
+							if (bw != null)
+								bw.close();
+							if (fw != null)
+								fw.close();
+						} catch (IOException ex) {
+							ex.printStackTrace();
+						}
+					}
 					Runtime r= Runtime.getRuntime();
 					r.exec("java -jar UpdaterAOW.jar");
-					System.exit(0);
+	                Uaow uaow = new Uaow();
+	                uaow.up();
 				}
 				else return;
 				
@@ -60,3 +82,4 @@ public class CheckUpdate {
 		}
  }
 }
+
