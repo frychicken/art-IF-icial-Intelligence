@@ -16,7 +16,7 @@ clean up code
 
 ## Version 5.0.2: Bad Gateway
 
->AOW3.java 
+>AOW1.java 
 
 add update + updater (UpdaterAOW.jar)
 
