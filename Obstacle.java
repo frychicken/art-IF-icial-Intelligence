@@ -1,9 +1,10 @@
+//Main file
 import javax.swing.*;
 import java.awt.*;
 public class Obstacle {
 	public static void main(String[] args) throws Exception {
-        CheckUpdate ccu= new CheckUpdate();
-        ccu.checkup();
+                CheckUpdate ccu= new CheckUpdate();
+                ccu.checkup();
 		JFrame frame = new JFrame("Wait"); 
 		Loading loadd = new Loading(frame);
 		frame.getContentPane().add(BorderLayout.CENTER, loadd); 
