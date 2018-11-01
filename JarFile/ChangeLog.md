@@ -25,3 +25,13 @@ change the location of the application
 add sound
 
 add icon
+
+## Version 5.0.3: Service Unavailable
+
+>AOW.java
+
+fix update issues
+
+add class file 
+
+create new class to self update (can update using updated version of updater)
