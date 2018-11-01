@@ -16,7 +16,7 @@ class Upd{
 	public void doup() {
 		String cheee = getClass().getResource("").toString();
 		cheee = cheee.substring(cheee.indexOf(":")+1);
-		File file = new File(cheee+"/OAW.jar"); 
+		File file = new File(cheee+"/AOW.jar"); 
 		try {
 			file.delete();
 		} catch (Exception e) {
@@ -26,7 +26,7 @@ class Upd{
 		try {
 			URL website = new URL("https://raw.githubusercontent.com/frychicken/art-IF-icial-Intelligence/master/JarFile/AOW.jar");
 			ReadableByteChannel ok = Channels.newChannel(website.openStream());
-			FileOutputStream okay = new FileOutputStream(cheee+"/OAW.jar");
+			FileOutputStream okay = new FileOutputStream(cheee+"/AOW.jar");
 			okay.getChannel().transferFrom(ok, 0, Long.MAX_VALUE);
 			okay.close();
 			ok.close();
