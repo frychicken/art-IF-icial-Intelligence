@@ -14,6 +14,26 @@ class Uaow {
 }
 class Upd{
 	public void doup() {
+		File file2[] = new File[8];
+		file2[0] = new File(getClass().getResource("Dog_.class").toString().substring(getClass().getResource("Dog_.class").toString().indexOf(":")+1));
+    	        file2[2] = new File(getClass().getResource("Execut.class").toString().substring(getClass().getResource("Execut.class").toString().indexOf(":")+1));
+		file2[3] = new File(getClass().getResource("Nani.class").toString().substring(getClass().getResource("Nani.class").toString().indexOf(":")+1));
+		file2[4] = new File(getClass().getResource("Soundfx.class").toString().substring(getClass().getResource("Soundfx.class").toString().indexOf(":")+1));
+		file2[5] = new File(getClass().getResource("Loading.class").toString().substring(getClass().getResource("Loading.class").toString().indexOf(":")+1));
+		file2[1] = new File(getClass().getResource("Frychicken.class").toString().substring(getClass().getResource("Frychicken.class").toString().indexOf(":")+1));
+		file2[6] = new File(getClass().getResource("Execut$Method_T.class").toString().substring(getClass().getResource("Execut$Method_T.class").toString().indexOf(":")+1));
+		file2[7] = new File(getClass().getResource("Dog_$1.class").toString().substring(getClass().getResource("Dog_$1.class").toString().indexOf(":")+1));
+
+		for(int a =0; a<7; a++) {
+		try {
+			file2[a].delete();
+		} catch (Exception e) {
+			System.out.println("cannot find file"+file2[a]);
+			JOptionPane.showConfirmDialog((Component) null, "Cannot find file"+file2[a],
+					"Update", JOptionPane.CLOSED_OPTION);
+			e.printStackTrace();
+		 }
+		}
 		String cheee = getClass().getResource("").toString();
 		cheee = cheee.substring(cheee.indexOf(":")+1);
 		File file = new File(cheee+"/AOW.jar"); 
@@ -21,6 +41,8 @@ class Upd{
 			file.delete();
 		} catch (Exception e) {
 			System.out.println("cannot find file");
+			JOptionPane.showConfirmDialog((Component) null, "Cannot find file\n AOW.jar",
+					"Update", JOptionPane.CLOSED_OPTION);
 			e.printStackTrace();
 		}
 		try {
@@ -32,6 +54,8 @@ class Upd{
 			ok.close();
 		} catch (Exception e) {
 			System.out.println("Update failed");
+			JOptionPane.showConfirmDialog((Component) null, "Update failed\n Cannot download file",
+					"Update", JOptionPane.CLOSED_OPTION);
 			e.printStackTrace();
 		}
 
