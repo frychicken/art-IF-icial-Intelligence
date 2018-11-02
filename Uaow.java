@@ -18,7 +18,7 @@ class Uaow {
 					file[6] = new File(getClass().getResource("Execut$Method_T.class").toString().substring(getClass().getResource("Execut$Method_T.class").toString().indexOf(":")+1));
 					file[7] = new File(getClass().getResource("Dog_$1.class").toString().substring(getClass().getResource("Dog_$1.class").toString().indexOf(":")+1));
 
-					for(int a =0; a<7; a++) {
+					for(int a =0; a<8; a++) {
 					try {
 						file[a].delete();
 					} catch (Exception e) {
