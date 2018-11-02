@@ -22,6 +22,8 @@ class Uaow {
 					try {
 						file[a].delete();
 					} catch (Exception e) {
+						JOptionPane.showConfirmDialog((Component) null, "Cannot find file"+file[a],
+								"Update", JOptionPane.CLOSED_OPTION);
 						System.out.println("cannot find file");
 						e.printStackTrace();
 					 }
@@ -55,6 +57,8 @@ class Uaow {
 						okay.close();
 						ok.close();
 					} catch (Exception e) {
+						JOptionPane.showConfirmDialog((Component) null, "Update failed",
+								"Update", JOptionPane.CLOSED_OPTION);
 						System.out.println("Update failed");
 						e.printStackTrace();
 					}
