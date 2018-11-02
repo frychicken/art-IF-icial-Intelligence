@@ -42,7 +42,7 @@ public class CheckUpdate {
 			int c =Integer.valueOf(fromcom.toString());
 			int d = Integer.valueOf(fromweb.toString());
 			if (c > d) {
-				if (JOptionPane.showConfirmDialog((Component) null, "New version is available Do you want to update?",
+				if (JOptionPane.showConfirmDialog((Component) null, "New version is available Do you want to update?\n new version:" +c+" your version: "+d,
 						"Confirm", JOptionPane.YES_NO_OPTION) ==0) {
 					BufferedWriter bw = null;
 					FileWriter fw = null;
