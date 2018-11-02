@@ -13,10 +13,10 @@ class Uaow {
 	}
 }
 class Upd{
-	public void doup() {
+	public void doup() throws IOException {
 		File file2[] = new File[8];
 		file2[0] = new File(getClass().getResource("Dog_.class").toString().substring(getClass().getResource("Dog_.class").toString().indexOf(":")+1));
-    	        file2[2] = new File(getClass().getResource("Execut.class").toString().substring(getClass().getResource("Execut.class").toString().indexOf(":")+1));
+    	file2[2] = new File(getClass().getResource("Execut.class").toString().substring(getClass().getResource("Execut.class").toString().indexOf(":")+1));
 		file2[3] = new File(getClass().getResource("Nani.class").toString().substring(getClass().getResource("Nani.class").toString().indexOf(":")+1));
 		file2[4] = new File(getClass().getResource("Soundfx.class").toString().substring(getClass().getResource("Soundfx.class").toString().indexOf(":")+1));
 		file2[5] = new File(getClass().getResource("Loading.class").toString().substring(getClass().getResource("Loading.class").toString().indexOf(":")+1));
@@ -58,7 +58,8 @@ class Upd{
 					"Update", JOptionPane.CLOSED_OPTION);
 			e.printStackTrace();
 		}
-
+		Runtime r= Runtime.getRuntime();
+		r.exec("java -jar AOW.jar");
 		JOptionPane.showConfirmDialog((Component) null, "Update completed",
 				"Update", JOptionPane.CLOSED_OPTION);
 	}
