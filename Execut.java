@@ -11,6 +11,7 @@ public class Execut  extends Component {
 	Color object = Color.RED;
 	Color obstacle = Color.GREEN;
 	private boolean debugg = true;
+	private boolean sound = true;
 	private ArrayList<Integer> xOb = new ArrayList<Integer>();
 	private  ArrayList<Integer> yOb = new ArrayList<Integer>();
 	int userin = 1;
@@ -23,8 +24,9 @@ public class Execut  extends Component {
 		alala = b;
 		this.userin = userin;
 	}
-	public void assin(boolean debugg) {
+	public void assin(boolean debugg, boolean sound) {
 		this.debugg = debugg;
+		this.sound = sound;
 		for (int i =0; i < userin; i++) {
 			if (i ==0 || i ==2) {
 				xOb.add(RanX());
@@ -102,7 +104,7 @@ public class Execut  extends Component {
 		}
 	}
 	public void run() {
-		frame = new JFrame("D2+D-AO Simulator" + " @Debug mode: "+debugg); 
+		frame = new JFrame("AO Simulator" + " @Debug mode: "+debugg + ", sound: "+ sound); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		contentt = new Method_T();
 		frame.getContentPane().add(BorderLayout.CENTER, contentt);  
@@ -116,6 +118,7 @@ public class Execut  extends Component {
 	private boolean right = false;
 	private boolean left = false;
 	private boolean up = true;
+	private boolean down = false;
 	public void runpls() {
 		while(true) {
 			for (int i =0; i < userin; i ++) {
@@ -127,21 +130,41 @@ public class Execut  extends Component {
 					left = false;
 					right = true;
 				}
+				if (i==3){
+				if (yOb.get(userin-2)-yOb.get(userin-1)-150<= 35 &&( (xOb.get(userin-2) < xOb.get(userin-1) && xOb.get(userin-3) > xOb.get(userin-1))||(xOb.get(userin-3) < xOb.get(userin-1) && xOb.get(userin -2) > xOb.get(userin-1)))){
+				 down= true;
+				 }
+				}
+				int fff = 0;
+				if(down){
+				 y+=3;
+				 fff++;
+				 if (fff==50){
+				 right =!right;
+				 left =!left;
+				 fff=0;
+				 up=true;
+				 }
+				}
 				if (left) {
 					msg = "LEFT";
 					x-=3;
 					if (y <= yOb.get(i) +150 && (x+123) < xOb.get(i)  ) { up = true; }
 					else up = false;
+					if (sound) {
 					Soundfx soundfx = new Soundfx();
 					soundfx.sound();
+					}
 				}
 				if(right) {
 					msg = "RIGHT";
 					x+=3;
 					if (y <= yOb.get(i) +150 && x > xOb.get(i)  ) { up = true; }
 					else up = false;
+					if (sound) {
 					Soundfx soundfx = new Soundfx();
 					soundfx.sound();
+					}
 				}
 				if(up) {
 					y--;
@@ -149,8 +172,10 @@ public class Execut  extends Component {
 					right = false;
 				}
 				if (y+40+50 <= 0) {
+					if (sound) {
 					Soundfx soundfx = new Soundfx();
 					soundfx.sound();
+					}
 					frame.setVisible(false); 
 					return;
 				}
@@ -167,3 +192,5 @@ public class Execut  extends Component {
 		}
 	}
 }
+
+
