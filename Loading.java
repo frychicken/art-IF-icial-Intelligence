@@ -30,13 +30,11 @@ public class Loading extends Component {
 	public void drawdouknow(Graphics f) {
 		msg[0] = "You can click \"help\" in the setup menu to get help";
 		msg[1] = "Sometimes, the program does something not expected";
-		msg[2] = "Sometimes, this loading screen does not appear!";
-		if (f2>0.5 && f2<0.7)
+		if (f2>0.5)
 			i =0;
-		else if (f2> 0.7 && f2 < 0.9)
-			i = 2;
-		else
-			i =1;
+		else 
+			i = 1;
+
 		display = msg[i];
 
 		f.setFont(new Font("default", Font.ITALIC, 10));
