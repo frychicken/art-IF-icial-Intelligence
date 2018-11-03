@@ -15,9 +15,10 @@ public class Nani {
 		int userin = Integer.valueOf(reduc.substring(tess+1, reduc.indexOf(",")));
 		if (userin > 3 || userin<=0)
 			while (userin >3 || userin <=0) { 
-				userin = Integer.valueOf(doge.cat_().substring(tess+1, reduc.indexOf(",")));
 				if (userin >3 || userin <=0)
 					fry.ChickenIsNotFood();
+				userin = Integer.valueOf(doge.cat_().substring(tess+1, reduc.indexOf(",")));
+			
 			}
 		boolean debugg = true;
 		boolean sound = true;
