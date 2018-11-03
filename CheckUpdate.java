@@ -11,8 +11,16 @@ import javax.swing.JOptionPane;
 
 public class CheckUpdate {
  public void checkup() throws Exception {
-	 String cheee = getClass().getResource("version.txt").toString();
+	 String cheee = null; 
+	 try {
+	 cheee = getClass().getResource("version.txt").toString();
 	 cheee = cheee.substring(cheee.indexOf(":")+1);
+	 } catch (Exception e) {
+		 System.out.println("Error checking update: Missing dependencie(s)");
+			JOptionPane.showConfirmDialog((Component) null, "Error checking update: Missing dependencie(s)",
+					"Update", JOptionPane.CLOSED_OPTION);
+			return;
+	 }
 	 File checkifex = new File(cheee);
 		if(checkifex.exists() && !checkifex.isDirectory()) {
 			@SuppressWarnings("resource")
