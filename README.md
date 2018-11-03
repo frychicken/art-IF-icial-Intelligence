@@ -8,8 +8,6 @@
 
 >Sometimes, it does not go as expected
 
->System.getProperty("user.dir"); ??!! = dir -1 
-
 ~~for ob > 1 obstacles: sometimes the object just does not go as expected due to the algorithm~~
 
 ~~for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm~~
@@ -57,6 +55,10 @@ Decide how many obstacles you want (default: 1; max: 3; min: 1; default color: g
 **Coloring**
 
 RGB color-red, green, blue: you can set this for obstacle(s) and object (default obstacle(s) color: green - R:0 G:255 B:0; default object color: red -R:255  G:0  B:0)
+
+**sound** 
+
+option to turn sound on or off
 
 **Updates**
 program will check for update automatically (if there is version.txt and UpdaterAow.jar in the same location)
