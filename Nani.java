@@ -7,7 +7,7 @@ public class Nani {
 		Dog_ doge = new Dog_();
 		String reduc = doge.cat_();
 		Color obstacle = new Color(Integer.valueOf(reduc.substring(reduc.indexOf("*")+1,reduc.indexOf("!"))),Integer.valueOf(reduc.substring(reduc.indexOf("!")+1,reduc.indexOf("@"))),Integer.valueOf(reduc.substring(reduc.indexOf("@")+1,reduc.indexOf("#"))));
-		Color object = new Color(Integer.valueOf(reduc.substring(reduc.indexOf("#")+1,reduc.indexOf("$"))),Integer.valueOf(reduc.substring(reduc.indexOf("$")+1,reduc.indexOf("%"))),Integer.valueOf(reduc.substring(reduc.indexOf("%")+1)));
+		Color object = new Color(Integer.valueOf(reduc.substring(reduc.indexOf("#")+1,reduc.indexOf("$"))),Integer.valueOf(reduc.substring(reduc.indexOf("$")+1,reduc.indexOf("%"))),Integer.valueOf(reduc.substring(reduc.indexOf("%")+1, reduc.indexOf("^"))));
 		int tess = reduc.indexOf(".");
 		b = Integer.valueOf(reduc.substring(0,tess));
 		System.out.println("Lab(s): "+b);
@@ -20,18 +20,34 @@ public class Nani {
 					fry.ChickenIsNotFood();
 			}
 		boolean debugg = true;
+		boolean sound = true;
 		int n = -1;
 		int st = Integer.valueOf(reduc.substring(reduc.indexOf(",")+1,reduc.indexOf("*")));
+		int stt = Integer.valueOf(reduc.substring(reduc.indexOf("^")+1));
 		System.out.println("Obstacle(s): "+ userin);
 		while (i <= b) {
 			Execut exec = new Execut(userin, object, obstacle,i,b); 
 			if (st != 1) {
 				debugg = false;
-				exec.assin(debugg);
+				if (stt != 1) {
+					sound = false;
+				}
+				else sound = true;
+				exec.assin(debugg, sound);
 			}
-			else { debugg = true; exec.assin(debugg);}
-			if (n == -1)
+			else { 
+				debugg = true; 
+				if (stt != 1) {
+					sound = false;
+				}
+				else sound = true;
+				exec.assin(debugg, sound);
+				}
+	
+			if (n == -1) {
 			System.out.println("Debug mode = " +debugg);
+			System.out.println("Sound: " +sound);
+			}
 			exec.run();
 			System.out.println("lap: "+ i++);
 			n++;
