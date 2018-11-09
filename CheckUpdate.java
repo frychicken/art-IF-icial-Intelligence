@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,10 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import javax.swing.JOptionPane;
-
 public class CheckUpdate {
- public void checkup() throws Exception {
+ @SuppressWarnings("resource")
+public void checkup() throws Exception {
 	 String cheee = null; 
 	 try {
 	 cheee = getClass().getResource("version.txt").toString();
@@ -23,7 +23,6 @@ public class CheckUpdate {
 	 }
 	 File checkifex = new File(cheee);
 		if(checkifex.exists() && !checkifex.isDirectory()) {
-			@SuppressWarnings("resource")
 			BufferedReader br2 = new BufferedReader(new FileReader(cheee)); 
 			String st2; 
 			StringBuilder fromweb = new StringBuilder();
@@ -42,11 +41,16 @@ public class CheckUpdate {
 				while ((line = br.readLine()) != null) {
 					fromcom.append(line);
 				}
+			}catch (Exception e) {
+				System.out.println("Error: Cannot connect to server!");
+				JOptionPane.showConfirmDialog((Component) null, "Error: Cannot connect to server!",
+						"Update", JOptionPane.CLOSED_OPTION);
+				return ;
 			} finally {
 				if (br != null) {
 					br.close();
 				}
-			}
+			} 
 			int c =Integer.valueOf(fromcom.toString());
 			int d = Integer.valueOf(fromweb.toString());
 			if (c > d) {
@@ -74,8 +78,11 @@ public class CheckUpdate {
 					r.exec("java -jar UpdaterAOW.jar");
 	                Uaow uaow = new Uaow();
 	                uaow.up();
+	                stillqm = false;
 				}
-				else return;
+				else {
+					return;
+				}
 				
 			}
 			else {System.out.println("No new updates");
@@ -90,4 +97,3 @@ public class CheckUpdate {
 		}
  }
 }
-
