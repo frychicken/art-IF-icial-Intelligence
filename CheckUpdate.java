@@ -8,17 +8,47 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class CheckUpdate {
+	private boolean stillqm = true;
  @SuppressWarnings("resource")
 public void checkup() throws Exception {
+	 String todis = "Checking for updates";
+		JFrame frame = new JFrame("Checking update"); 
+		DrawCheck drc= new DrawCheck(frame);
+		frame.getContentPane().add(BorderLayout.CENTER, drc); 
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+		frame.setResizable(false);
+		frame.setSize(300, 300); 	
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);  
+		while (stillqm) {
+		try {
+			drc.changec(todis);
+			drc.repaint();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	 String cheee = null; 
 	 try {
 	 cheee = getClass().getResource("version.txt").toString();
 	 cheee = cheee.substring(cheee.indexOf(":")+1);
 	 } catch (Exception e) {
 		 System.out.println("Error checking update: Missing dependencie(s)");
-			JOptionPane.showConfirmDialog((Component) null, "Error checking update: Missing dependencie(s)",
-					"Update", JOptionPane.CLOSED_OPTION);
+		 todis = "Error checking update: Missing dependencie(s)";
+			try {
+				drc.changec(todis);
+				drc.repaint();
+				Thread.sleep(1000);
+			} catch (Exception er) {
+				er.printStackTrace();
+			}
+			frame.setVisible(false);  
+			stillqm = false;
 			return;
 	 }
 	 File checkifex = new File(cheee);
@@ -30,8 +60,6 @@ public void checkup() throws Exception {
 				fromweb.append(st2);
 			}
 			System.out.println("Checking for updates");
-			JOptionPane.showConfirmDialog((Component) null, "Checking for updates",
-					"Update", JOptionPane.CLOSED_OPTION);
 			BufferedReader br = null;
 			StringBuilder fromcom = new StringBuilder();
 			try {
@@ -42,9 +70,17 @@ public void checkup() throws Exception {
 					fromcom.append(line);
 				}
 			}catch (Exception e) {
+				 todis = "Error: Cannot connect to server!";
+					try {
+						drc.changec(todis);
+						drc.repaint();
+						Thread.sleep(1000);
+					} catch (Exception er) {
+						er.printStackTrace();
+					}
 				System.out.println("Error: Cannot connect to server!");
-				JOptionPane.showConfirmDialog((Component) null, "Error: Cannot connect to server!",
-						"Update", JOptionPane.CLOSED_OPTION);
+				frame.setVisible(false);  
+				stillqm = false;
 				return ;
 			} finally {
 				if (br != null) {
@@ -54,6 +90,14 @@ public void checkup() throws Exception {
 			int c =Integer.valueOf(fromcom.toString());
 			int d = Integer.valueOf(fromweb.toString());
 			if (c > d) {
+				 todis = "New version is available";
+					try {
+						drc.changec(todis);
+						drc.repaint();
+						Thread.sleep(1000);
+					} catch (Exception er) {
+						er.printStackTrace();
+					}
 				if (JOptionPane.showConfirmDialog((Component) null, "New version is available Do you want to update?\n new version:" +c+" your version: "+d,
 						"Confirm", JOptionPane.YES_NO_OPTION) ==0) {
 					BufferedWriter bw = null;
@@ -74,13 +118,24 @@ public void checkup() throws Exception {
 							ex.printStackTrace();
 						}
 					}
+					 todis = "Almost done! Updating...";
+						try {
+							drc.changec(todis);
+							drc.repaint();
+							Thread.sleep(1000);
+						} catch (Exception er) {
+							er.printStackTrace();
+						}
 					Runtime r= Runtime.getRuntime();
 					r.exec("java -jar UpdaterAOW.jar");
 	                Uaow uaow = new Uaow();
 	                uaow.up();
+	                frame.setVisible(false);  
 	                stillqm = false;
 				}
 				else {
+					frame.setVisible(false);  
+					stillqm = false;
 					return;
 				}
 				
@@ -88,12 +143,24 @@ public void checkup() throws Exception {
 			else {System.out.println("No new updates");
 			JOptionPane.showConfirmDialog((Component) null, "No new updates",
 					"Update", JOptionPane.CLOSED_OPTION);
+			frame.setVisible(false); 
+			stillqm = false;
 			}
 				
        }
 		else {
+			 todis = "Cannot check for update";
+				try {
+					drc.changec(todis);
+					drc.repaint();
+				} catch (Exception er) {
+					er.printStackTrace();
+				}
 			JOptionPane.showConfirmDialog((Component) null, "Cannot check for update\n Reason: version = null",
 					"Update", JOptionPane.CLOSED_OPTION);
+			frame.setVisible(false);  
+			stillqm = false;
 		}
  }
+}
 }
