@@ -12,6 +12,10 @@
 
 ~~for ob = 3 obstacles: sometimes the object just does not go as expected due to the algorithm~~
 
+## BETA
+
+Beta version is developed [here](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/src/master/)
+
 ## TODO: 
 
 fix, improve algorithm, add 2 objects + 
