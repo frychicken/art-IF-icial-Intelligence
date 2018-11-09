@@ -1,12 +1,12 @@
 ## Version 2.0.4: No Content
 
-> AO.java
+> AO.jar
 
 fixed bugs from beta (can be found in history)
 
 ## Version 4.0.4: Not Found
 
-> AOW.java
+> AOW.jar
 
 add coloring for object and obstacle(s)
 
@@ -16,7 +16,7 @@ clean up code
 
 ## Version 5.0.2: Bad Gateway
 
->AOW1.java 
+>AOW1.jar
 
 add update + updater (UpdaterAOW.jar)
 
@@ -28,7 +28,7 @@ add icon
 
 ## Version 5.0.3: Service Unavailable
 
->AOW.java
+>AOW3.jar
 
 fix update issues
 
@@ -38,6 +38,8 @@ create new class to self update (can update using updated version of updater)
 
 ## Version 5.0.5: HTTP Version Not Supported
 
+>AOW3.jar
+
 Add option to not play sound
 
 improve algorithm
@@ -45,3 +47,11 @@ improve algorithm
 improve checking + update 
 
 fix bugs + exceptions
+
+## Version 5.0.6: Variant Also Negotiates
+
+>AOW.jar
+
+Add GUI for chaecking updates
+
+Fix "checking update"'s exceptions when cannot connect to wifi / does not have internet
