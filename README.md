@@ -42,6 +42,10 @@ ______________________________________________________________
 
 #### _ABOUT_:
 
+**Avoiding obstacle eclipse project [here](https://github.com/frychicken/AvoidingObstacles)**
+
+**Updater eclipse project [here](https://github.com/frychicken/UpdaterAOW)**
+
 **Debug mode:**
 
 Display x,y,censors and everything you need to fix bugs
