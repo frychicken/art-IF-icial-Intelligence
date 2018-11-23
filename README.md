@@ -4,7 +4,7 @@
 
 > This is avoiding objects (Obstacles) simulator written in java
 
-Hey, this is how auto-car works (just kidding, if this is how, maybe there are many car crashes [but you get a point])
+Hey, this is how auto-car works (just kidding, if this is how, maybe there are many car crashes [but you get the point])
 
 ## known issues
 
