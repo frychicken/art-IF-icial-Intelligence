@@ -19,8 +19,10 @@ class Dog_ extends JFrame implements ActionListener {
 	static JTextField textfield2;
 	static JCheckBox checkBox;
 	static JCheckBox checkBox2;
+	static JCheckBox checkBox3;
 	static int ff=0;
 	static int fff=0;
+	static int owen = 0;
 	static List<Integer> doggo = new LinkedList<Integer>();
 	public String cat_() throws Exception{
 		final URI uri = new URI("https://github.com/frychicken/art-IF-icial-Intelligence/blob/master/README.md");
@@ -74,12 +76,14 @@ class Dog_ extends JFrame implements ActionListener {
 		JPanel panel = new JPanel(); 
 		checkBox = new JCheckBox("Debug mode");  	
 		checkBox2 = new JCheckBox("Enable sound");  	
+		checkBox3 = new JCheckBox("Auto-pilot");  
 		panel.add(label);  
 		panel.add(textfield); 
 		panel.add(label2);
 		panel.add(textfield2); 
 		panel.add(checkBox);
 		panel.add(checkBox2);
+		panel.add(checkBox3);
 		panel.add(button); 
 		panel.add(button2);
 		panel.add(lblLabel1);
@@ -100,8 +104,9 @@ class Dog_ extends JFrame implements ActionListener {
 		textfield2.setBounds(410, 34, 100,20);
 		checkBox.setBounds(250,100,120,19);
 		checkBox2.setBounds(250,120,120,19);
-		button.setBounds(270,140,70,25);
-		button2.setBounds(270, 165, 65, 25);
+		checkBox3.setBounds(250,140,120,19);
+		button.setBounds(270,160,70,25);
+		button2.setBounds(270, 185, 65, 25);
 		lblLabel1.setBounds(7, 60, 250,20);
 		lblLabel2.setBounds(7, 80, 200,20);
 		lbllbl1.setBounds(250,65,50,10);
@@ -117,7 +122,7 @@ class Dog_ extends JFrame implements ActionListener {
 		txtTextBox5.setBounds(370, 80, 40, 20);
 		txtTextBox6.setBounds(470, 80, 40, 20);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(600, 230); 
+		frame.setSize(600, 300); 
 		frame.setResizable(false);
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
 		frame.setLocationRelativeTo(null);
@@ -129,7 +134,7 @@ class Dog_ extends JFrame implements ActionListener {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} 
-			String doge = doggo.get(0) +"." + doggo.get(1)+","+ff+"*"+doggo.get(2)+"!"+doggo.get(3)+"@"+doggo.get(4)+"#"+doggo.get(5)+"$"+doggo.get(6)+"%"+doggo.get(7)+"^"+fff;
+			String doge = doggo.get(0) +"." + doggo.get(1)+","+ff+"*"+doggo.get(2)+"!"+doggo.get(3)+"@"+doggo.get(4)+"#"+doggo.get(5)+"$"+doggo.get(6)+"%"+doggo.get(7)+"^"+fff+"&"+owen;
 			ff =0;
 			doggo.clear();
 			frame.setVisible(false);
@@ -144,6 +149,9 @@ class Dog_ extends JFrame implements ActionListener {
 		}
 		if(checkBox2.isSelected()) {
 			fff =1;
+		}
+		if(checkBox3.isSelected()) {
+			owen =1;
 		}
 		if (s.equals("Okay") ) { 
 			synchronized (doggo) {
