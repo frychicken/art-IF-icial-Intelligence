@@ -76,7 +76,7 @@ option to turn sound on or off
 
 **auto-pilot**
 
-You can control the object
+You can control the object using arrow keys
 
 **Updates**
 program will check for update automatically (if there is version.txt and UpdaterAow.jar in the same location)
