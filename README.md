@@ -74,5 +74,9 @@ RGB color-red, green, blue: you can set this for obstacle(s) and object (default
 
 option to turn sound on or off
 
+**auto-pilot**
+
+You can control the object
+
 **Updates**
 program will check for update automatically (if there is version.txt and UpdaterAow.jar in the same location)
