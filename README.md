@@ -78,5 +78,7 @@ option to turn sound on or off
 
 You can control the object using arrow keys
 
+press "s" to sop moving up and "c" to continue moving up
+
 **Updates**
 program will check for update automatically (if there is version.txt and UpdaterAow.jar in the same location)
