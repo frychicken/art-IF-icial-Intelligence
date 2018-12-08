@@ -1,5 +1,7 @@
 import javax.swing.*; 
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.*;
 public class Execut  extends Component {
 	private static final long serialVersionUID = 1L;
@@ -17,6 +19,7 @@ public class Execut  extends Component {
 	int userin = 1;
 	int lalala;
 	int alala;
+	boolean autopilot = false;
 	public Execut(int userin, Color object, Color obstacle, int i, int b) {
 		this.object = object;
 		this.obstacle = obstacle;
@@ -24,9 +27,10 @@ public class Execut  extends Component {
 		alala = b;
 		this.userin = userin;
 	}
-	public void assin(boolean debugg, boolean sound) {
+	public void assin(boolean debugg, boolean sound, boolean autopilot) {
 		this.debugg = debugg;
 		this.sound = sound;
+		this.autopilot = autopilot;
 		for (int i =0; i < userin; i++) {
 			if (i ==0 || i ==2) {
 				xOb.add(RanX());
@@ -97,6 +101,7 @@ public class Execut  extends Component {
 					g.drawString("lab(s) run: "+lalala, 60, 720);
 					g.drawString("Obstacle(s): "+userin, 60, 700);
 					g.drawString("lab(s): "+alala, 60, 680);	
+					g.drawString("auto-pilot: "+autopilot, 250, 690);	
 				}
 			}
 			g.setColor(object);
@@ -104,29 +109,78 @@ public class Execut  extends Component {
 		}
 	}
 	public void run() {
-		frame = new JFrame("AO Simulator" + " @Debug mode: "+debugg + ", sound: "+ sound); 
+		frame = new JFrame("AO Simulator" + " @Debug mode: "+debugg + ", sound: "+ sound+", AP: "+ autopilot); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		contentt = new Method_T();
 		frame.getContentPane().add(BorderLayout.CENTER, contentt);  
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
 		frame.setResizable(false);
 		frame.setSize(600, 800); 
+		if (autopilot) {
+		frame.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent event) {
+                moveTheTHing(event);
+            }
+        });
+		}
+		frame.setFocusable(true); 
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true); 
 		runpls();
 	}
+	
+	
 	private boolean right = false;
 	private boolean left = false;
 	private boolean up = true;
 	private boolean down = false;
-	public void runpls() {
+	private boolean check = true;
+	
+	   public void moveTheTHing(KeyEvent event) { 
+	          
+		      int key = event.getKeyCode(); 
+		      int key2 = event.getKeyChar();
+		      if (key == KeyEvent.VK_LEFT) {
+		    	     x-=10;
+					check = false;
+					msg = "LEFT";
+		      }
+		      else if (key == KeyEvent.VK_RIGHT) {
+		    	     x+=10;
+					check = false;
+					msg = "RIGHT";
+		      }
+		      else if (key == KeyEvent.VK_UP) {
+		    	     y-=20;
+					check = false;
+					msg = "UP";
+		      }
+		      else if (key == KeyEvent.VK_DOWN) {
+		    	     y+=20;
+					check = false;
+					msg = "DOWN";
+		      }
+		      if (key2 == 's') {
+		    	  up = false;
+		    	  msg = "Stop";
+		      }
+		      if (key2 == 'c') {
+		    	  up = true;
+		    	  msg = "Moving";
+		      }
+
+		   }
+		
+	
+	public void runpls(){
 		while(true) {
+	
 			for (int i =0; i < userin; i ++) {
-				if ((y >= yOb.get(i) && y<= yOb.get(i) +150) && (x+123 >= xOb.get(i)  && x+123 <= xOb.get(i)+150)) {
+				if ((y >= yOb.get(i) && y<= yOb.get(i) +150) && (x+123 >= xOb.get(i)  && x+123 <= xOb.get(i)+150) && check) {
 					left = true;
 					right = false;
 				}
-				else if ((y >= yOb.get(i)  && y<= yOb.get(i) +150) && (x >= xOb.get(i)  && x <= xOb.get(i)+150)) {
+				else if ((y >= yOb.get(i)  && y<= yOb.get(i) +150) && (x >= xOb.get(i)  && x <= xOb.get(i)+150) && check) {
 					left = false;
 					right = true;
 				}
@@ -146,6 +200,8 @@ public class Execut  extends Component {
 				 up=true;
 				 }
 				}
+			      
+				
 				if (left) {
 					msg = "LEFT";
 					x-=3;
@@ -192,5 +248,3 @@ public class Execut  extends Component {
 		}
 	}
 }
-
-
