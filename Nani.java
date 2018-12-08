@@ -24,7 +24,9 @@ public class Nani {
 		boolean sound = true;
 		int n = -1;
 		int st = Integer.valueOf(reduc.substring(reduc.indexOf(",")+1,reduc.indexOf("*")));
-		int stt = Integer.valueOf(reduc.substring(reduc.indexOf("^")+1));
+		int stt = Integer.valueOf(reduc.substring(reduc.indexOf("^")+1, reduc.indexOf("&")));
+		int sttt = Integer.valueOf(reduc.substring(reduc.indexOf("&")+1));
+		boolean autopilot = true;
 		System.out.println("Obstacle(s): "+ userin);
 		while (i <= b) {
 			Execut exec = new Execut(userin, object, obstacle,i,b); 
@@ -34,7 +36,11 @@ public class Nani {
 					sound = false;
 				}
 				else sound = true;
-				exec.assin(debugg, sound);
+				if (sttt != 1) {
+					autopilot = false;
+				}
+				else autopilot = true;
+				exec.assin(debugg, sound, autopilot);
 			}
 			else { 
 				debugg = true; 
@@ -42,12 +48,17 @@ public class Nani {
 					sound = false;
 				}
 				else sound = true;
-				exec.assin(debugg, sound);
+				if (sttt != 1) {
+					autopilot = false;
+				}
+				else autopilot = true;
+				exec.assin(debugg, sound, autopilot);
 				}
 	
 			if (n == -1) {
 			System.out.println("Debug mode = " +debugg);
 			System.out.println("Sound: " +sound);
+			System.out.println("Auto-pilot= "+autopilot);
 			}
 			exec.run();
 			System.out.println("lap: "+ i++);
