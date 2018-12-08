@@ -1,4 +1,4 @@
-## Linux view:
+## Linux, Windows view:
 
 ![Image](3.png)
 
