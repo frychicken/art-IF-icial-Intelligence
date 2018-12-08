@@ -18,6 +18,10 @@ Hey, this is how auto-car works (just kidding, if this is how, maybe there are m
 
 Beta version is developed [here](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/src/master/)
 
+Avoiding obstacle eclipse project [here](https://github.com/frychicken/AvoidingObstacles)
+
+Updater eclipse project [here](https://github.com/frychicken/UpdaterAOW)
+
 ## TODO: 
 
 fix, improve algorithm, add 2 objects + 
