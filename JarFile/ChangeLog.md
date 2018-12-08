@@ -50,8 +50,14 @@ fix bugs + exceptions
 
 ## Version 5.0.6: Variant Also Negotiates
 
->AOW.jar
+>AOW4.jar
 
 Add GUI for chaecking updates
 
 Fix "checking update"'s exceptions when cannot connect to wifi / does not have internet
+
+## Version 5.0.7: Insufficient Storage
+
+> AOW.jar
+
+Add Auto-pilot
