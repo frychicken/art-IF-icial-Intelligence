@@ -37,9 +37,9 @@ public class Nani {
 				}
 				else sound = true;
 				if (sttt != 1) {
-					autopilot = false;
+					autopilot = true;
 				}
-				else autopilot = true;
+				else autopilot = false;
 				exec.assin(debugg, sound, autopilot);
 			}
 			else { 
@@ -49,9 +49,9 @@ public class Nani {
 				}
 				else sound = true;
 				if (sttt != 1) {
-					autopilot = false;
+					autopilot = true;
 				}
-				else autopilot = true;
+				else autopilot = false;
 				exec.assin(debugg, sound, autopilot);
 				}
 	
