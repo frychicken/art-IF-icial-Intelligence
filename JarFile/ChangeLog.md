@@ -58,6 +58,12 @@ Fix "checking update"'s exceptions when cannot connect to wifi / does not have i
 
 ## Version 5.0.7: Insufficient Storage
 
-> AOW.jar
+> non
 
 Add Auto-pilot
+
+## Version 5.0.8: Loop Detected
+
+> AOW.jar
+
+Fix problem w/ autopilot and update 
