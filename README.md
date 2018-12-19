@@ -24,6 +24,8 @@ Updater eclipse project [here](https://github.com/frychicken/UpdaterAOW)
 
 ## TODO: 
 
+[top  priority] Change the way update works by using a string embedded instead of a separate file (almost done)
+
 fix, improve algorithm, add 2 objects + 
 
 _________________________________________
