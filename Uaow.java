@@ -39,7 +39,7 @@ class Uaow {
 		website[6] = new URL("https://raw.githubusercontent.com/frychicken/art-IF-icial-Intelligence/master/bin/Execut$Method_T.class");
 		website[7] = new URL("https://raw.githubusercontent.com/frychicken/art-IF-icial-Intelligence/master/bin/Dog_$1.class");
 		website[8] = new URL("https://raw.githubusercontent.com/frychicken/art-IF-icial-Intelligence/master/bin/DrawCheck.class");
-
+        
 		String cheee = getClass().getResource("").toString();
 		cheee = cheee.substring(cheee.indexOf(":")+1);
 		String af[] = new String[9];
@@ -54,6 +54,7 @@ class Uaow {
 		af[8] = "DrawCheck.class";
 		for(int a=0; a<8; a++) {
 			try {
+			
 				ReadableByteChannel ok = Channels.newChannel(website[a].openStream());
 				FileOutputStream okay = new FileOutputStream(cheee+af[a]);
 				okay.getChannel().transferFrom(ok, 0, Long.MAX_VALUE);
@@ -67,6 +68,12 @@ class Uaow {
 			}
 		}
 		try {
+			URL updaterD = new URL("https://raw.githubusercontent.com/frychicken/art-IF-icial-Intelligence/master/Updater/UpdaterAOW.jar");
+			ReadableByteChannel ok = Channels.newChannel(updaterD.openStream());
+			FileOutputStream okay = new FileOutputStream(cheee+"UpdaterAOW.jar");
+			okay.getChannel().transferFrom(ok, 0, Long.MAX_VALUE);
+			okay.close();
+			ok.close();
 			Runtime r= Runtime.getRuntime();
 			r.exec("java -jar UpdaterAOW.jar");
 		}catch(Exception e) {
@@ -77,4 +84,3 @@ class Uaow {
 				"Update", JOptionPane.CLOSED_OPTION);
 	}
 }
-
