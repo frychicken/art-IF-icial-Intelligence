@@ -75,7 +75,7 @@ class Dog_ extends JFrame implements ActionListener {
 		button.addActionListener(loen); 
 		JPanel panel = new JPanel(); 
 		checkBox = new JCheckBox("Debug mode");  	
-		checkBox2 = new JCheckBox("Enable sound");  	
+		checkBox2 = new JCheckBox("Sound");  	
 		checkBox3 = new JCheckBox("Auto-pilot");  
 		panel.add(label);  
 		panel.add(textfield); 
