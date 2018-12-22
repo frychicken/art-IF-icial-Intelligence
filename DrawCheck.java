@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import javax.swing.JFrame;
 public class DrawCheck extends Component {
@@ -9,6 +8,9 @@ String todis = "Checking for updates";
 	String msg[] = new String[3];
 	public DrawCheck(JFrame frame) {
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
+	}
+	public DrawCheck() {
+		
 	}
 	public void paint(Graphics g) {
 		g.drawString(todis, 80,150);
@@ -45,5 +47,7 @@ String todis = "Checking for updates";
 		f.setColor(Color.BLACK);
 		f.drawString(display, 20,120);
 	}
+	public int getVersion() {
+		return 510; //510
+	}
 }
-
