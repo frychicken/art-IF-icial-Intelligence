@@ -88,4 +88,4 @@ program will check for update automatically
 
 **log file**
 
-it will notify you the location; normally, it is located at you current directory
+it will notify you the location; normally, it is located at your current directory
