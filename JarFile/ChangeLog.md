@@ -64,6 +64,18 @@ Add Auto-pilot
 
 ## Version 5.0.8: Loop Detected
 
-> AOW.jar
+> AOW5.jar
 
 Fix problem w/ autopilot and update 
+
+## Version 5.1.0: Not Extended 
+
+> AOW.jar
+
+Now, there is no need for the file version.txt for the program to check for update
+
+Update log file, program will write everything to log
+
+It will print out where the Object hit the obstacle
+
+it shows the coordinate of the object
