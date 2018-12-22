@@ -18,7 +18,7 @@ public class Nani {
 				if (userin >3 || userin <=0)
 					fry.ChickenIsNotFood();
 				userin = Integer.valueOf(doge.cat_().substring(tess+1, reduc.indexOf(",")));
-			
+
 			}
 		boolean debugg = true;
 		boolean sound = true;
@@ -53,15 +53,23 @@ public class Nani {
 				}
 				else autopilot = false;
 				exec.assin(debugg, sound, autopilot);
-				}
-	
+			}
+
 			if (n == -1) {
-			System.out.println("Debug mode = " +debugg);
-			System.out.println("Sound: " +sound);
-			System.out.println("Auto-pilot= "+autopilot);
+				String str1 = "Debug mode: "+debugg;
+				String str2 = "Sound: "+sound;
+				String str3 = "Auto-pilot: "+autopilot;
+				System.out.println("Debug mode = " +debugg);
+				System.out.println("Sound: " +sound);
+				System.out.println("Auto-pilot= "+autopilot);
+				fry.writeLog(str1);
+				fry.writeLog(str2);
+				fry.writeLog(str3);
 			}
 			exec.run();
-			System.out.println("lap: "+ i++);
+			int cpp = i++;
+			System.out.println("lap: "+ cpp);
+			fry.writeLog("lap: " +cpp);
 			n++;
 		}
 		if (fry.ChickenNotFood() != 0) {  System.out.println("Ok, doing it"); Nihaoma(); }
