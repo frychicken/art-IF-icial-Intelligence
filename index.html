@@ -10,18 +10,269 @@
   <body  id="grad" >
    <style>
    #grad {
-   background-image:  linear-gradient(to top, #bdc3c7, #2c3e50);
+   background-image:  linear-gradient(to bottom, #bdc3c7, #2c3e50);
   }
     </style>
      
      <center><h1>Avoiding Obstacle Simulator</h1></center>
  <style>
 @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
 h1{
     font-family: 'Major Mono Display', monospace;
+font-size: 40px;
     }
+h2{
+    font-family: 'Major Mono Display', monospace;
+font-size: 30px;
+    }
+lol, a{
+font-family: 'Ubuntu', sans-serif;
+font-size: 20px;
+}
+lol2{
+font-family: 'Ubuntu', sans-serif;
+font-size: 20px;
+}
+lol3{
+font-family: 'Ubuntu', sans-serif;
+font-size: 20px;
+}
 
 </style>
+
+<style>
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+
+  <img src="2.png" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="3.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="4.png" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="5.png" style="width: 100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+ <span class="dot" onclick="currentSlide(4)"></span> 
+ <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+
+<br>
+<br>
+<center>
+
+<h2>Download</h2>
+<a href="https://github.com/frychicken/art-IF-icial-Intelligence/blob/master/JarFile/ChangeLog.md">ChangeLog</a>
+<br>
+<lol>Click <a href = "https://github.com/frychicken/art-IF-icial-Intelligence/blob/master/JarFile/AOW.jar?raw=true"> here </a>to download <b><i>AOW.jar</i></b></lol>
+<br>
+<lol>Click<a href = "https://github.com/frychicken/art-IF-icial-Intelligence/blob/master/Updater/UpdaterAOW.jar?raw=true"> here </a>to download <i>UpdaterAOW.jar</i></lol>
+</center>
+
+<br>
+<center>
+<h2>About</h2>
+
+<lol2><b>Avoiding obstacle eclipse project <a href="https://github.com/frychicken/AvoidingObstacles">here</a></b></lol2>
+<br>
+<lol2><b>Updater eclipse project <a href="https://github.com/frychicken/UpdaterAOW">here</a></b></lol2>
+<br>
+
+<lol3><b><i>Debug mode:</b></i>
+<br>
+Display x,y,censors and everything you need to fix bugs
+<br>
+<b><i>Non - debug mode</b></i>
+<br>
+
+Just display moving object and obstacle(s)
+<br>
+
+<b><i>Lab(s)</b></i>
+<br>
+
+Run the program how many times you desire (default: 10; max: non; min: non)
+<br>
+
+<b><i>Obstacle(s)</b></i>
+<br>
+
+Decide how many obstacles you want (default: 1; max: 3; min: 1; default color: green)
+<br>
+
+<b><i>Coloring</b></i>
+<br>
+
+RGB color-red, green, blue: you can set this for obstacle(s) and object (default obstacle(s) color: green - R:0 G:255 B:0; default object color: red -R:255  G:0  B:0)
+<br>
+
+<b><i>sound</b></i>
+<br>
+option to turn sound on or off
+<br>
+
+<b><i>auto-pilot</b></i>
+<br>
+
+You can control the object using arrow keys
+
+press "s" to sop moving up and "c" to continue moving up
+<br>
+
+<b><i>Updates</b></i>
+<br>
+
+program will check for update automatically
+<br>
+
+<b><i>log file</b></i>
+<br>
+
+it will notify you the location; normally, it is located at you current directory
+
+</lol3>
+</center>
+
+
+<script>
+var slideIndex = 1;
+
+showSlides(slideIndex);
+var check=0;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+check = 1;
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+check = 1;
+}
+
+function showSlides(n) {
+  var i;
+  if (check ==0){
+  slideIndex++;
+  }
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+if (slideIndex > slides.length) {slideIndex = 1} 
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+
+}
+</script>
+
      
      
 </body>
