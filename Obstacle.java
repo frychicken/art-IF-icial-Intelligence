@@ -3,9 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 public class Obstacle {
 	public static void main(String[] args) throws Exception {
-                CheckUpdate ccu= new CheckUpdate();
-                ccu.checkup();
-		JFrame frame = new JFrame("Wait"); 
+		CheckUpdate ccu= new CheckUpdate();
+		ccu.checkup();
+		DrawCheck drc = new DrawCheck();
+		JFrame frame = new JFrame("Version: "+drc.getVersion()); 
 		Loading loadd = new Loading(frame);
 		frame.getContentPane().add(BorderLayout.CENTER, loadd); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
@@ -33,4 +34,3 @@ public class Obstacle {
 		System.exit(0);
 	}
 }
-
