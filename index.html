@@ -181,7 +181,7 @@ font-size: 20px;
 <h2><b>About</b></h2>
 <lol>This is avoiding objects (Obstacles) simulator written in java
 <br>
-Hey, this is how auto-car works (just kidding, if this is how, maybe there are many car crashes [but you get the point])
+Hey, this is how auto-car works (if this is how, maybe there are many car crashes [but you get the point])
 </lol><br>
 <lol2>Avoiding obstacle eclipse project <a href="https://github.com/frychicken/AvoidingObstacles">here</a></lol2>
 <br>
@@ -193,7 +193,7 @@ Hey, this is how auto-car works (just kidding, if this is how, maybe there are m
 <h3>Feature</h3>
 <b>Debug mode:</b>
 <br>
-Display x,y,censors and everything you need to fix bugs
+Display x,y,censors and everything you need to fix bug(s)
 <br>
 <b>Non - debug mode</b>
 <br>
@@ -226,7 +226,7 @@ option to turn sound on or off
 <b>auto-pilot</b>
 <br>
 
-You can control the object using arrow keys
+You can control the object using arrow keys:
 
 press "s" to sop moving up and "c" to continue moving up
 <br>
@@ -240,7 +240,7 @@ program will check for update automatically
 <b>log file</b>
 <br>
 
-it will notify you the location; normally, it is located at your current directory
+the program will notify you the location; normally, it is located at your current directory.
 
 </lol3>
 </center>
@@ -285,6 +285,9 @@ function showSlides(n) {
   if (check ==0){
   slideIndex++;
   }
+   else if(check >0){
+             slideIndex--;
+           }
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
