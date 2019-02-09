@@ -417,9 +417,6 @@ public class Execut  extends Component {
 
 ## Check sum
 
-**Sha256**: ```3fc1db14cf68a0c92963f922b8df6c838c8775c9e5bc19ab3c93af681d4e6f92```
+[Click here](/JarFile/ChangeLog.md)
 
-**MD5**: ```57ed4374edd9f6b08e7983b01871dea4```
-
-**SHA1**: ```48a3fb85c607eedd2c09d9617dd6ea5ae7719187```
 
