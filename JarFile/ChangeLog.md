@@ -52,7 +52,7 @@ fix bugs + exceptions
 
 >AOW4.jar
 
-Add GUI for chaecking updates
+Add GUI for checking updates
 
 Fix "checking update"'s exceptions when cannot connect to wifi / does not have internet
 
