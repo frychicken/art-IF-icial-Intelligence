@@ -70,7 +70,7 @@ Fix problem w/ autopilot and update
 
 ## Version 5.1.0: Not Extended 
 
-> AOW.jar
+> AOW6.jar
 
 Now, there is no need for the file version.txt for the program to check for update
 
@@ -79,3 +79,9 @@ Update log file, program will write everything to log
 It will print out where the Object hit the obstacle
 
 it shows the coordinate of the object
+
+## Version 5.1.1: Network Authentication Required
+
+> AOW.jar
+
+Add customizer support (read more at readme.md)
