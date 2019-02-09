@@ -52,6 +52,8 @@ ______________________________________________________________
 
 **Updater eclipse project [here](https://github.com/frychicken/UpdaterAOW)**
 
+**Customizer eclipse project [here](https://github.com/frychicken/AOWCustomizer/tree/master/AOWCustomize)**
+
 **Debug mode:**
 
 Display x,y,censors and everything you need to fix bugs
