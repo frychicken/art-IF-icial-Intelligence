@@ -26,10 +26,6 @@ Hey, this is how auto-car works (just kidding, if this is how, maybe there are m
 
 Beta version is developed [here](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/src/master/)
 
-Avoiding obstacle eclipse project [here](https://github.com/frychicken/AvoidingObstacles)
-
-Updater eclipse project [here](https://github.com/frychicken/UpdaterAOW)
-
 ## TODO: 
 
 ~~[top  priority] Change the way update works by using a string embedded instead of a separate file (almost done)~~
@@ -60,7 +56,7 @@ ______________________________________________________________
 
 **Updater eclipse project [here](https://github.com/frychicken/UpdaterAOW)**
 
-**Customizer eclipse project [here](https://github.com/frychicken/AOWCustomizer/tree/master/AOWCustomize)**
+**Customizer eclipse project [here](https://github.com/frychicken/AOWCustomizer)**
 
 **Debug mode:**
 
