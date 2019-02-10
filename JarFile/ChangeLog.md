@@ -141,3 +141,18 @@ Add customizer support (read more at readme.md)
 **MD5**: ```03a92df4b5d97a24abe0bfef8dd2802c```
 
 **SHA1**: ```ec1a122f0b3aed403f4bbe92a39ecf359798a971```
+
+## Version 5.2.0: Unknown Error
+
+> AOWb1.jar
+
+_Pre-release version_
+
+Add system native look + feel
+
+**Sha256**: ```cba16f8f56ea0b7948a37aafac89d2b4b45012089b54d9d4b0ec70e534d37c55```
+
+**MD5**: ```d7337db1fab90b3f275782ef25f7703a```
+
+**SHA1**: ```24793dd9fb16ae2fc73fbf0384bc18f154bd9735```
+
