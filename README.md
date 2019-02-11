@@ -8,6 +8,8 @@
 
 [Check sum](#Check-sum)
 
+[FAQ](#FAQ)
+
 ## What is this? 
 
 > This is avoiding objects (Obstacles) simulator written in java
@@ -415,4 +417,17 @@ public class Execut  extends Component {
 
 [Click here](/JarFile/ChangeLog.md)
 
+## FAQ
+
+Where is my log file?
+
+> It is in the .JAR file; it shouldn't be that way becasue of the mistake a made when making it into JAR
+
+Why are there always errors when running the program when new version released?
+
+> Because I am too lazy to test
+
+Why it my program not updating?
+
+> Because of the code I use -- it is not very efficient
 
