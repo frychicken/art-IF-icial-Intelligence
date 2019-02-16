@@ -26,6 +26,8 @@ Hey, this is how auto-car works (just kidding, if this is how, maybe there are m
 
 ## BETA
 
+_Discontinued_
+
 Beta version is developed [here](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/src/master/)
 
 ## TODO: 
