@@ -98,6 +98,10 @@ program will check for update automatically
 
 it will notify you the location; normally, it is located at your current directory
 
+**Darkmode**
+
+partially
+
 ## For advanced user
 
 _**This is an experimental feature**_
