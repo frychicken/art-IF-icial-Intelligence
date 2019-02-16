@@ -131,7 +131,7 @@ it shows the coordinate of the object
 
 ## Version 5.1.1: Network Authentication Required
 
-> AOW.jar
+> AOW7.jar
 
 Add customizer support (read more at readme.md)
 
@@ -144,15 +144,23 @@ Add customizer support (read more at readme.md)
 
 ## Version 5.2.0: Unknown Error
 
-> AOWb1.jar
-
-_Pre-release version_
+> AOW.jar
 
 Add system native look + feel
 
-**Sha256**: ```cba16f8f56ea0b7948a37aafac89d2b4b45012089b54d9d4b0ec70e534d37c55```
+Dark-mode
 
-**MD5**: ```d7337db1fab90b3f275782ef25f7703a```
+fix log issues
 
-**SHA1**: ```24793dd9fb16ae2fc73fbf0384bc18f154bd9735```
+fix layout
+
+fix alert icon
+
+introduce new bug(s)
+
+**Sha256**: ```9f5c71ccec3222d12f8e005ccac99aa9f43ce659246683d6a40018b84b65952c```
+
+**MD5**: ```e7254c602e9756ff571d3c20627496ac```
+
+**SHA1**: ```860e85b77cc3957bb71851f11cb3debd663f3f48```
 
