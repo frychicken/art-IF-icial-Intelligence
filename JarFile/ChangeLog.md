@@ -1,5 +1,7 @@
 ## Version 2.0.4: No Content
 
+_OCT 27, 2018_
+
 > AO.jar
 
 fixed bugs from beta (can be found in history)
@@ -11,6 +13,8 @@ fixed bugs from beta (can be found in history)
 **SHA1**: ```ea9bf72b4189b6f1ba81fcf1e10768211c2c9047```
 
 ## Version 4.0.4: Not Found
+
+_OCT 27, 2018_
 
 > AOW0.jar
 
@@ -28,6 +32,8 @@ clean up code
 
 
 ## Version 5.0.2: Bad Gateway
+
+_OCT 30, 2018_
 
 >AOW1.jar
 
@@ -47,6 +53,8 @@ add icon
 
 ## Version 5.0.3: Service Unavailable
 
+_OCT 31, 2018_
+
 >AOW2.jar
 
 fix update issues
@@ -62,6 +70,8 @@ create new class to self update (can update using updated version of updater)
 **SHA1**: ```74de318a0d4f900ed4bfae59398137f89bf6ad36```
 
 ## Version 5.0.5: HTTP Version Not Supported
+
+_NOV 2, 2018_
 
 >AOW3.jar
 
@@ -81,6 +91,8 @@ fix bugs + exceptions
 
 ## Version 5.0.6: Variant Also Negotiates
 
+_NOV 9, 2018_
+
 >AOW4.jar
 
 Add GUI for checking updates
@@ -95,11 +107,15 @@ Fix "checking update"'s exceptions when cannot connect to wifi / does not have i
 
 ## Version 5.0.7: Insufficient Storage
 
+_DEC 7, 2018_
+
 > non
 
 Add Auto-pilot
 
 ## Version 5.0.8: Loop Detected
+
+_DEC 9, 2018_
 
 > AOW5.jar
 
@@ -112,6 +128,8 @@ Fix problem w/ autopilot and update
 **SHA1**: ```7c562dd17d1f9b984980eb1faaea66350fbde11b```
 
 ## Version 5.1.0: Not Extended 
+
+_DEC 21, 2018_
 
 > AOW6.jar
 
@@ -131,6 +149,8 @@ it shows the coordinate of the object
 
 ## Version 5.1.1: Network Authentication Required
 
+_FEB 9, 2019_
+
 > AOW7.jar
 
 Add customizer support (read more at readme.md)
@@ -143,6 +163,8 @@ Add customizer support (read more at readme.md)
 **SHA1**: ```ec1a122f0b3aed403f4bbe92a39ecf359798a971```
 
 ## Version 5.2.0: Unknown Error
+
+_FEB 15, 2019_
 
 > AOW.jar
 
