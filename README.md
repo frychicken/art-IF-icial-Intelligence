@@ -90,7 +90,7 @@ option to turn sound on or off
 
 You can control the object using arrow keys
 
-press "s" to sop moving up and "c" to continue moving up
+press "s" to stop moving up and "c" to continue moving up
 
 **Updates**
 
@@ -427,7 +427,7 @@ public class Execut  extends Component {
 
 Where is my log file?
 
-> It is in the .JAR file; it shouldn't be that way becasue of the mistake a made when making it into JAR
+> It is in the .JAR file; it shouldn't be that way because of the mistake I made when making it into JAR
 
 Why are there always errors when running the program when new version released?
 
