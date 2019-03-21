@@ -166,7 +166,7 @@ Add customizer support (read more at readme.md)
 
 _FEB 15, 2019_
 
-> AOW.jar
+> AOW8.jar
 
 Add system native look + feel
 
@@ -185,4 +185,23 @@ introduce new bug(s)
 **MD5**: ```e7254c602e9756ff571d3c20627496ac```
 
 **SHA1**: ```860e85b77cc3957bb71851f11cb3debd663f3f48```
+
+##Version 5.2.1: Web Server Is Down
+
+_MAR 20, 2019_
+
+> AOW.jar
+
+Add time executed
+
+Improve logs
+
+introduce new bug(s)
+
+**Sha256**: ```e722eec41c09d41ad8eebfe4b51775c62ba894c95ba87a2dd8601d11c4dbde94```
+
+**MD5**: ```e8ecf59af073241940123fa0652cfcb1```
+
+**SHA1**: ```25042db68f088c686b1fc00f5b24646468553f46```
+
 

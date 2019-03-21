@@ -103,7 +103,7 @@ it will notify you the location; normally, it is located at your current directo
 
 **Darkmode**
 
-partially
+Yep, it is here
 
 ## For advanced user
 
