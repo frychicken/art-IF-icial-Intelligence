@@ -143,6 +143,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.*;
 public class Execut  extends Component {
@@ -162,13 +164,16 @@ public class Execut  extends Component {
 	int lalala;
 	int alala;
 	boolean autopilot = false;
+	boolean dark;
 	Frychicken fry = new Frychicken();
-	public Execut(int userin, Color object, Color obstacle, int i, int b) {
+	Estima est = new Estima();
+	public Execut(int userin, Color object, Color obstacle, int i, int b, boolean darkmode) {
 		this.object = object;
 		this.obstacle = obstacle;
 		lalala = i;
 		alala = b;
 		this.userin = userin;
+		dark = darkmode;
 	}
 	public void assin(boolean debugg, boolean sound, boolean autopilot) throws IOException {
 		this.debugg = debugg;
@@ -282,8 +287,20 @@ public class Execut  extends Component {
 	}
 	public void run() {
 		frame = new JFrame("AO Simulator" + " @Debug mode: "+debugg + ", sound: "+ sound); 
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE); 
+		frame.addWindowListener(new WindowAdapter() {
+			   public void windowClosing(WindowEvent evt) {
+				     System.out.println();
+			     System.out.println("Program terminated by user");
+			     fry.writeLog("Program terminated by user");
+			     est.getEst();
+			     System.exit(0);
+			   }
+			  });
 		contentt = new Method_T();
+		if (dark) {
+			frame.getContentPane().setBackground(Color.DARK_GRAY);  
+		}
 		frame.getContentPane().add(BorderLayout.CENTER, contentt);  
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("lollol.png")));
 		frame.setResizable(false);
@@ -430,7 +447,7 @@ Where is my log file?
 
 > It is in the .JAR file; it shouldn't be that way because of the mistake I made when making it into JAR
 
-Why are there always errors when running the program when new version released?
+Why are there always errors when running the newest version?
 
 > Because I am too lazy to test
 
