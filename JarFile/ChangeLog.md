@@ -204,7 +204,7 @@ introduce new bug(s)
 
 **SHA1**: ```25042db68f088c686b1fc00f5b24646468553f46```
 
-# Version 5.2.1: Connection Timed Out
+# Version 5.2.2: Connection Timed Out
 
 _MAR 23, 2019_
 
