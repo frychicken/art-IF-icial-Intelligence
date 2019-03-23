@@ -13,7 +13,7 @@
 
 ## What is this? 
 
-> This is avoiding objects (Obstacles) simulator written in java
+> This is avoiding objects (Obstacles) simulator/game written in java
 
 Hey, this is how auto-car works (just kidding, if this is how, maybe there are many car crashes [but you get the point])
 
@@ -105,17 +105,27 @@ it will notify you the location; normally, it is located at your current directo
 
 Yep, it is here
 
+**Game mode**
+
+This program can be a game too
+
+**custom algorithm**
+
+If you don't know anything, don't click check!!! (for more info, read more below)
+
 ## For advanced user
 
 _**This is an experimental feature**_
 
 you can change the algorithm
 
-_Needed class to compile:_ **Soundfx, Frychicken**
+_Needed class to compile:_ **Soundfx, Frychicken, Estima**
 
 Soundfx: to make sound
 
 Frychicken: to write log 
+
+Estima: to calculate time executed
 
 > it is not necessary
 
@@ -139,6 +149,7 @@ I know this is not the most efficient way
 
 ```java
 
+//Logic stuff -- execut
 import javax.swing.*; 
 import java.awt.*;
 import java.awt.event.KeyAdapter;
@@ -165,20 +176,24 @@ public class Execut  extends Component {
 	int alala;
 	boolean autopilot = false;
 	boolean dark;
+	boolean game;
+	boolean ca;
 	Frychicken fry = new Frychicken();
 	Estima est = new Estima();
-	public Execut(int userin, Color object, Color obstacle, int i, int b, boolean darkmode) {
+	public Execut(int userin, Color object, Color obstacle, int i, int b, boolean darkmode, boolean ca) {
 		this.object = object;
 		this.obstacle = obstacle;
 		lalala = i;
 		alala = b;
 		this.userin = userin;
+		this.ca = ca;
 		dark = darkmode;
 	}
-	public void assin(boolean debugg, boolean sound, boolean autopilot) throws IOException {
+	public void assin(boolean debugg, boolean sound, boolean autopilot, boolean gamem) throws IOException {
 		this.debugg = debugg;
 		this.sound = sound;
 		this.autopilot = autopilot;
+		game = gamem;
 		for (int i =0; i < userin; i++) {
 			if (i ==0 || i ==2) {
 				xOb.add(RanX());
@@ -278,6 +293,9 @@ public class Execut  extends Component {
 					g.drawString("Obstacle(s): "+userin, 60, 700);
 					g.drawString("lab(s): "+alala, 60, 680);	
 					g.drawString("auto-pilot: "+autopilot, 250, 690);	
+					g.drawString("Game mode: "+game, 250, 705);	
+					g.drawString("Custom Algorithm: "+ca, 250, 720);	
+
 
 				}
 			}
@@ -315,6 +333,11 @@ public class Execut  extends Component {
 		frame.setFocusable(true); 
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true); 
+		   int firstexe = 0;
+			if (game&&firstexe==0) {
+		   	 up = false;
+		   	 firstexe++;
+		    }
 		runpls();
 	}
 
@@ -324,9 +347,11 @@ public class Execut  extends Component {
 	private boolean up = true;
 	private boolean down = false;
 	private boolean check = true;
-
+ 
+	
 	public void moveTheTHing(KeyEvent event) { 
-
+         
+	
 		int key = event.getKeyCode(); 
 		int key2 = event.getKeyChar();
 		if (key == KeyEvent.VK_LEFT) {
@@ -360,11 +385,44 @@ public class Execut  extends Component {
 
 	}
 
+	public void gameover(){
+	fry.writeLog("Game over");
+	System.out.println("Game over");
+	est.getEst();
+    try {
+		fry.YouLose();
+	} catch (Exception e) {
+		fry.writeLog(e.toString());
+	}
+	frame.setVisible(false);
+
+	Nani nina = new Nani(dark);
+	try {
+		nina.Nihaoma();
+	} catch (Exception e) {
+        fry.writeLog(e.toString());
+		e.printStackTrace();
+	}
+	System.exit(0);
+}
 // Make changes to runpls() -- recommended 
 	public void runpls(){
 		while(true) {
 
 			for (int i =0; i < userin; i ++) {
+	if(game) {
+					
+					if ((y+40 >= yOb.get(i) && y+40<= yOb.get(i) +150) && (x+40 >= xOb.get(i)  && x+40 <= xOb.get(i)+150) ) {
+
+						gameover();
+					}
+					else if ((y+90 >= yOb.get(i)  && y+90<= yOb.get(i) +150) && (x+90 >= xOb.get(i)  && x+90 <= xOb.get(i)+150) ) {
+						gameover();
+						
+					}
+					
+				}
+
 				if () {
 
 					left = true;

@@ -190,7 +190,7 @@ introduce new bug(s)
 
 _MAR 20, 2019_
 
-> AOW.jar
+> AOW9.jar
 
 Add time executed
 
@@ -203,5 +203,23 @@ introduce new bug(s)
 **MD5**: ```e8ecf59af073241940123fa0652cfcb1```
 
 **SHA1**: ```25042db68f088c686b1fc00f5b24646468553f46```
+
+# Version 5.2.1: Connection Timed Out
+
+_MAR 23, 2019_
+
+> AOW.jar
+
+add Game mode
+
+fix executed times in logs.txt
+
+merge custom algorithm
+
+**Sha256**: ```8987debd1b6f02cb3070ac925e07017fe8e2ea18f88c9dc138e2ccb6fb5c883e```
+
+**MD5**: ```eaef4229cdd81d4a901c269580a9592f```
+
+**SHA1**: ```7bbd8d40fd86dc34d7890bcb8fc551ecfe48487f```
 
 
