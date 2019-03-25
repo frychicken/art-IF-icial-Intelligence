@@ -333,24 +333,41 @@ fix, improve algorithm, add 2 objects +
 </footer>
 <script>
 var slideIndex = 1;
-
+var t0;
 showSlides(slideIndex);
 var check=0;
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 check = 1;
+t0 = performance.now();
 }
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 check = 1;
+t0 = performance.now();
 }
 
 function showSlides(n) {
   var i;
+   
   if (check ==0){
+
   slideIndex++;
   }
+
+
+if(check ==1){
+var t1 =  performance.now();
+var tt = t1-t0;
+if (tt >= 3000){
+check = 0;
+
+}
+
+}
+
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
