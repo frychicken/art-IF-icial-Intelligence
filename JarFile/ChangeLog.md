@@ -1,3 +1,169 @@
+## Version 1.0.0: Continue (Beta 1)
+
+_OCT 19, 2018_
+
+> AvoidingObstacle
+
+Initial release
+
+Sources:
+
+[Obstacle.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/aa0794bb2acd93e58151d600f1a2bef1cf6e76c5/Obstacle.java)
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/2cddfd5641fea7e95dedff6cb64394084096cee4/Execut.java)
+
+**Sha256**: ```89c65e8876779dd5c683b80f241bf9cb57ae309de9dfd30ef167c94af7b510e7```
+
+**MD5**: ```1958ca970568a2de086a934b73936287```
+
+**SHA1**: ```2aa70c6bb56cf5e9ca3586a74c194d46acd249a5```
+
+## Version 1.0.1: Switching Protocols (Beta 2)
+
+_OCT 19, 2018_
+
+> AvoidingObstacle2
+
+Add lab(s) in console
+
+Sources:
+
+[Obstacle.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/173f1aad2f8d4a8811dd245fe44b2309f1b4f5a8/Obstacle.java)
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/26d6f3481a5e8b83127c26a89635e5a59a35f880/Execut.java)
+
+[Dog_.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/fa3c3e04b2093c1665a907e20173ef5224d97f87/Dog_.java)
+
+**Sha256**: ```4f9aef5f0859600ffbd2cfe3d0c96f028b5b014ef2d72b7e2289c32eb9dcdea2```
+
+**MD5**: ```b2831ea89aa7e93c8cbfacd7a2029f22```
+
+**SHA1**: ```cd66cbdf4529f8c60a7c35658856d75c5791d437```
+
+## Version 1.0.2: Processing (Beta 3)
+
+_OCT 21, 2018_
+
+> AvoidingObstacle3
+
+Introduce GUI
+
+Sources: 
+
+[Obstacle.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/e003eca45557c64a1327843974c8508384513e2b/Obstacle.java)
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/39784a5a66e3a82246ae29a7fa816fc3294d9323/Execut.java)
+
+[Dog_.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/b6d744ea8382ceac8412277884602aa86c029d2c/Dog_.java)
+
+[Nani.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/33d7953f0534a3d64fdb7e7a5f359bab5b661ebd/Nani.java)
+
+[Frychicken.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/78eb988d8b8e164550870e47c1a792571d3711f5/Frychicken.java)
+
+**Sha256**: ```6e924362f1172d1c57adfe07412dcf811e6844e4f492a3cab8d7e8e5b61a6bb5```
+
+**MD5**: ```c47bf2defee5665f5aefc89d7f8a503e```
+
+**SHA1**: ```49ca3cf5e35ea5c854e569e332984bb12e32d4a9```
+
+## Version 1.0.3: Early Hints (Beta 4)
+
+_OCT 22, 2018_
+
+> AvoidingOBstacle4
+
+Introduce Obstacle(s)
+
+Bugs 2 Obstacles +
+
+Sources:
+
+[Obstacle.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/758bf25d27b232dd60d316c3f680c84ac2bc59db/Obstacle.java)
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/844190e9d32b4b71e8abd5f0a7ffead1a52e1c13/Execut.java)
+
+[Dog_.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/60a221e853a37e748b8ec25a13dd568f3304042d/Dog_.java)
+
+[Nani.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/a5db9f6975f7042b8fdb9d7648ff15894f41a318/Nani.java)
+
+[Frychicken.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/00db4681b0f2e80dcd611c5ae10665f4491ba92d/Frychicken.java)
+
+**Sha256**: ```e8c47dc79636a07a371fda2c6b528c536e907b9c7e39d75284c185c210fc9393```
+
+**MD5**: ```c5402c37c1cc2156e1e2b39369110044```
+
+**SHA1**: ```998e00534971debd065f89b90bbd5ca81f35c009```
+
+## Version 2.0.0: OK (Beta 5)
+
+_OCT 24, 2018_
+
+> AvoidingObstacle5
+
+Fix bugs in beta 4
+
+Sources (Only Bugs fixed):
+
+[Nani.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/8ae74dc22e5502d4103cbff0262b22e19b94be84/Nani.java)
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/fc7ad50390c8826801a4c0d9b68c15016e3aaa71/Execut.java)
+
+**Sha256**: ```9748d08873c7ed5d16af105dcf09da0dae02ab6422e41be30357743458e6631e```
+
+**MD5**: ```cd7d722a5f1c6872de02faa9f2b4ae6e```
+
+**SHA1**: ```f0f4c3bf420452d01c122453ffcaa9a486478126```
+
+## Version 2.0.1: Created (Beta 6)
+
+_OCT 25, 2018_
+
+> AvoidingObstracle6
+
+Introduce Debug mode
+
+Sources (Only Changes):
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/f4945c9bd7c8ee7b81d3b11e21a4acaa9466a2b4/Execut.java)
+
+[Frychicken.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/08db5bfe6b0fb27521e449a4b63f983e7aee0443/Frychicken.java)
+
+[Nani.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/d101d37b8e8a174bc038f61088194454294c300b/Nani.java)
+
+**Sha256**: ```0e1526da63a39667393b48f4ed6ccd15b8535b7f2dab7b3471303489efc4312c```
+
+**MD5**: ```2691c7419f3804a05771596fc3baa0fd```
+
+**SHA1**: ```d94212eecde29c258fe6ca4a432bacac69deb8db```
+
+## Version 2.0.2: Accepted (Beta 7)
+
+_OCT 26, 2018_
+
+> AvoidingObstacle7
+
+Introduce Loading screen
+
+Several bugs fixed
+
+Sources (Only changes):
+
+[Obstacle.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/5a742ebf627520d7f09ac3648df0206c8986c079/Obstacle.java)
+
+[Execut.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/853adb9e7cd27661bc0687cf63d1fc016bfb7d69/Execut.java)
+
+[Frychicken.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/98582b217aabbce97752844e7ad3606b4504dd52/Frychicken.java)
+
+[Loading.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/891e596116a01aefd20fab10e4e2cd5258fcb516/Loading.java)
+
+[Nani.java](https://bitbucket.org/bobdinh139/art-if-icial-intelligence/raw/1903a4785354b06d102440ca4f32cc687c3c6aae/Nani.java)
+
+**Sha256**: ```bad202a441f8dbfcee7f4be01cfc1bbea8dc834af62a697a46c00b57613f3016```
+
+**MD5**: ```b303bdd80181e31625f2704eddca8018```
+
+**SHA1**: ```d698cebd6805b4bf25740d2bd2941d83677cd2e5```
+
 ## Version 2.0.4: No Content
 
 _OCT 27, 2018_
@@ -204,7 +370,7 @@ introduce new bug(s)
 
 **SHA1**: ```25042db68f088c686b1fc00f5b24646468553f46```
 
-# Version 5.2.2: Connection Timed Out
+## Version 5.2.2: Connection Timed Out
 
 _MAR 23, 2019_
 

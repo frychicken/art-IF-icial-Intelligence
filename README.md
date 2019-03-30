@@ -43,7 +43,7 @@ _________________________________________
 
 ### Jar file:
 
-[Latest here](/JarFile/AOW3.jar)
+[Latest here](/JarFile/AOW.jar)
 
 ### ChangeLog:
 
@@ -51,7 +51,7 @@ _________________________________________
 
 ### Pictures:
 
-[Here](Pic/Pic.md)
+[Here](Pic/Readme.md)
 
 ______________________________________________________________
 
