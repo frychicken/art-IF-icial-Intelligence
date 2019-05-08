@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/frychicken/AvoidingObstacles.svg?branch=master)](https://travis-ci.org/frychicken/AvoidingObstacles)
+
 # art(IF)icial Intelligence
 
 [About](#What-is-this?)
